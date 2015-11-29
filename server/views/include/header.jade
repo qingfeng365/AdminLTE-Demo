@@ -1,0 +1,112 @@
+.wrapper
+	//- 顶部工具栏
+	header.main-header
+		a.logo(href="/")
+			span.logo-mini
+				b A
+				| LT
+			span.logo-lg
+				b Admin
+				| LTE
+		nav.navbar.navbar-static-top(role="navigation")
+			//- 收缩边栏按钮
+			a.sidebar-toggle(href="#",data-toggle="offcanvas",role="button")
+				span.sr-only 边栏开关
+			//- 顶栏右侧自定义菜单
+			.navbar-custom-menu
+				//- 横向菜单
+				ul.nav.navbar-nav
+					//- 信息样式
+					li.dropdown.messages-menu
+						a.dropdown-toggle(href="#",data-toggle="dropdown")
+							i.fa.fa-envelope-o
+							//- 角标数字
+							span.label.label-success 4
+						ul.dropdown-menu
+							li.header 你有4条消息
+							li
+								ul.menu
+									li
+										a(href="#")
+											.pull-left
+												img.img-circle(src="/images/user2-160x160.jpg",alt="user")
+											h4 服务部
+												small: i.fa.fa-clock-o
+													| 5分钟
+											p 新功能什么时候上线?
+							li.footer: a(href="#") 阅读更多消息
+					//- 提醒样式
+					li.dropdown.notifications-menu
+						a.dropdown-toggle(href="#",data-toggle="dropdown")
+							i.fa.fa-bell-o
+							//- 角标数字
+							span.label.label-warning 10
+						ul.dropdown-menu
+							li.header 你有10条提醒
+							li
+								ul.menu
+									li
+										a(href="#")
+											i.fa.fa-users.text-aqua
+											| 今天新增5个成员
+							li.footer: a(href="#") 查看全部提醒
+					//- 任务样式
+					li.dropdown.tasks-menu
+						a.dropdown-toggle(href="#",data-toggle="dropdown")
+							i.fa.fa-flag-o
+							//- 角标数字
+							span.label.label-danger 3
+						ul.dropdown-menu
+							li.header 你有9个任务
+							li
+								ul.menu
+									li: a(href="#")
+										h3 新功能设计
+											small.pull-right 20%
+										.progress.xs
+											.progress-bar.progress-bar-aqua(style="width: 20%",role="progressbar")
+												span.sr-only 20%
+							li.footer
+								a(href="#") 查看所有任务						
+					//- 用户帐号
+					li.dropdown.user.user-menu
+						a.dropdown-toggle(href="#",data-toggle="dropdown")
+							img.user-image(src="/images/avatar5.png", alt="user")
+							span.hidden-xs 清风
+						ul.dropdown-menu
+							li.user-header
+								img.img-circle(src="/images/avatar5.png",alt="user")
+								p 清风 - 客户经理
+									small 2012.08
+							li.user-body
+								.row
+									.col-xs-4.text-center
+										a(href="#") 关注
+									.col-xs-4.text-center
+										a(href="#") 销售		
+									.col-xs-4.text-center
+										a(href="#") 客户
+							li.user-footer
+								.pull-left
+									a.btn.btn-default.btn-flat(href="#") 用户设置
+								.pull-right
+									a.btn.btn-default.btn-flat(href="#") 登出																	
+					//- 右侧控制面板边栏开关
+					li
+						a(href="#",data-toggle="control-sidebar")
+							i.fa.fa-gears
+	//- 左侧菜单栏
+	aside.main-sidebar
+		include ./mainmenu.jade
+	//- 右侧控制面板
+	aside.control-sidebar.control-sidebar-dark
+		include ./controlpanel.jade
+	.control-sidebar-bg
+	.content-wrapper
+		block content
+	//- footer
+	footer.main-footer
+		include ./mainfooter.jade
+
+
+				

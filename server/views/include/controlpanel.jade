@@ -1,0 +1,33 @@
+ul.nav.nav-tabs.nav-justified.control-sidebar-tabs
+	li.active
+		a(href="#control-sidebar-home-tab",data-toggle="tab")
+			i.fa.fa-home
+	li
+		a(href="#control-sidebar-settings-tab",data-toggle="tab")
+			i.fa.fa-gears
+.tab-content
+	.tab-pane.active#control-sidebar-home-tab
+		h3.control-sidebar-heading 最新活动
+		ul.control-sidebar-menu
+			li
+				a(href="javascript::;")
+					i.menu-icon.fa.fa-birthday-cake.bg-red
+					.menu-info
+						h4.control-sidebar-subheading 活动
+						p 于10.21日举行
+		h3.control-sidebar-heading 任务进程
+			ul.control-sidebar-menu
+				li
+					a(href="javascript::;")
+						h4.control-sidebar-subheading 任务
+							span.label.label-danger.pull-right 70%
+						.progress.progress-xxs
+							.progress-bar.progress-bar-danger(style="width:70%")
+	.tab-pane#control-sidebar-settings-tab
+		form(method="post")
+			h3.control-sidebar-heading 通用设置
+			.form-group
+				label.control-sidebar-subheading 报表使用习惯
+					input.pull-right(type="checkbox",checked)
+				p 设置详细说明		
+

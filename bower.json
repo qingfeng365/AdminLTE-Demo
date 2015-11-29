@@ -1,0 +1,23 @@
+{
+  "name": "Admin-demo",
+  "description": "",
+  "main": "",
+  "authors": [
+    "qingfengwuyou <h3658686@126.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/qingfeng365/AdminLTE-Demo",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "AdminLTE": "admin-lte#~2.3.2",
+    "Ionicons": "ionicons#~2.0.1"
+  }
+}

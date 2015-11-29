@@ -1,0 +1,147 @@
+extends ../layout
+
+block content
+	section.content-header
+		h1= title
+			small Welcome to #{title}
+		ol.breadcrumb
+			li
+				a(href="#")
+					i.fa.fa-dashboard  上级
+			li.active 当前
+	section.content
+		h3 info-box
+		.row
+			//- 3x2 = 6 , 6x2 = 12
+			.col-md-3.col-sm-6.col-xs-12
+				.info-box
+					span.info-box-icon.bg-aqua
+						i.fa.fa-envelope-o
+					.info-box-content
+						span.info-box-text 消息
+						span.info-box-number 1,410
+			.col-md-3.col-sm-6.col-xs-12
+				.info-box
+					span.info-box-icon.bg-green
+						i.fa.fa-flag-o
+					.info-box-content
+						span.info-box-text 标记
+						span.info-box-number 410
+			.col-md-3.col-sm-6.col-xs-12
+				.info-box
+					span.info-box-icon.bg-yellow
+						i.fa.fa-files-o
+					.info-box-content
+						span.info-box-text 上传
+						span.info-box-number 13,648
+			.col-md-3.col-sm-6.col-xs-12
+				.info-box
+					span.info-box-icon.bg-red
+						i.fa.fa-star-o
+					.info-box-content
+						span.info-box-text 关注
+						span.info-box-number 93,139												
+		.row
+			.col-md-3.col-sm-6.col-xs-12
+				.info-box.bg-aqua
+					span.info-box-icon
+						i.fa.fa-bookmark-o
+					.info-box-content
+						span.info-box-text 收藏
+						span.info-box-number 41,410
+						.progress
+							.progress-bar(style="width:70%")
+						span.progress-description
+							| 30天内增长70%		
+			.col-md-3.col-sm-6.col-xs-12
+				.info-box.bg-green
+					span.info-box-icon
+						i.fa.fa-thumbs-o-up
+					.info-box-content
+						span.info-box-text 点赞
+						span.info-box-number 41,410
+						.progress
+							.progress-bar(style="width:70%")
+						span.progress-description
+							| 30天内增长70%	
+			.col-md-3.col-sm-6.col-xs-12
+				.info-box.bg-yellow
+					span.info-box-icon
+						i.fa.fa-calendar
+					.info-box-content
+						span.info-box-text 事件
+						span.info-box-number 41,410
+						.progress
+							.progress-bar(style="width:70%")
+						span.progress-description
+							| 30天内增长70%		
+			.col-md-3.col-sm-6.col-xs-12
+				.info-box.bg-red
+					span.info-box-icon
+						i.fa.fa-comments-o
+					.info-box-content
+						span.info-box-text 报道
+						span.info-box-number 41,410
+						.progress
+							.progress-bar(style="width:70%")
+						span.progress-description
+							| 30天内增长70%		
+		h3 small-box (用于显示状态)
+		.row
+			.col-md-3.col-sm-6.col-xs-12
+				.small-box.bg-aqua
+					.inner
+						h3 150
+						p 最新订单
+					.icon
+						i.fa.fa-shopping-cart
+					a.small-box-footer(href="#") 更多信息
+						i.fa.fa-arrow-circle-right
+			.col-md-3.col-sm-6.col-xs-12
+				.small-box.bg-green
+					.inner
+						h3 53
+							sup(style="font-size:20px") %
+						p 增长率
+					.icon
+						i.ion.ion-stats-bars
+					a.small-box-footer(href="#") 更多信息
+						i.fa.fa-arrow-circle-right						
+			.col-md-3.col-sm-6.col-xs-12
+				.small-box.bg-yellow
+					.inner
+						h3 44
+						p 注册数量
+					.icon
+						i.ion.ion-person-add
+					a.small-box-footer(href="#") 更多信息
+						i.fa.fa-arrow-circle-right		
+			.col-md-3.col-sm-6.col-xs-12
+				.small-box.bg-red
+					.inner
+						h3 65
+						p 在线访问
+					.icon
+						i.ion.ion-pie-graph
+					a.small-box-footer(href="#") 更多信息
+						i.fa.fa-arrow-circle-right
+
+		h3.page-header 特殊widgets
+		.row
+			.col-md-4
+				.box.box-widget.widget-user-2
+					.widget-user-header.bg-yellow
+						.widget-user-image
+							img.img-circle(src="/images/user7-128x128.jpg")
+						h3.widget-user-username 大卫.李
+						h5.widget-user-desc 首席设计师
+					.box-footer.no-padding
+						ul.nav.nav-stacked
+							li: a(href="#") 项目
+								span.pull-right.badge.bg-blue 31
+							li: a(href="#") 任务
+								span.pull-right.badge.bg-aqua 5
+							li: a(href="#") 已完成
+								span.pull-right.badge.bg-green 12
+							li: a(href="#") 跟进
+								span.pull-right.badge.bg-red 842
