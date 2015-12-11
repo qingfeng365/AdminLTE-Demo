@@ -529,9 +529,9 @@ block content
 								input.form-control(type="text",name="message",placeholder="输入消息...")
 								span.input-group-btn
 									button.btn.btn-primary.btn-flat(type="submit") 发送
-		h3.page-header table
+		h3.page-header 普通表格table VS 产品列表ul
 		.row
-			.col-md-9
+			.col-md-8
 				.box.box-info
 					.box-header.with-border
 						h3.box-title 最新订单
@@ -558,5 +558,148 @@ block content
 											span.label.label-success 已交货
 										td
 											.sparkbar(data-color="#00a65a", data-height="20") 90,80,90,-70,61,-83,63
+									tr
+										td
+											a(href="#") OR1848
+										td 使命召唤 10
+										td 
+											span.label.label-warning 待处理
+										td
+											.sparkbar(data-color="#f39c12", data-height="20") 90,80,-90,70,61,-83,68
+									tr
+										td
+											a(href="#") OR9842
+										td 使命召唤 10
+										td 
+											span.label.label-danger 已批准
+										td
+											.sparkbar(data-color="#f56954", data-height="20") 90,-80,90,70,-61,83,63
+									tr
+										td
+											a(href="#") OR7429
+										td 使命召唤 10
+										td 
+											span.label.label-info 处理中
+										td
+											.sparkbar(data-color="#00c0ef", data-height="20") 90,80,-90,70,-61,83,63
+									tr
+										td
+											a(href="#") OR9842
+										td 使命召唤 10
+										td 
+											span.label.label-warning 已送货
+										td
+											.sparkbar(data-color="#00a65a", data-height="20") 90,80,90,-70,61,-83,63
+									tr
+										td
+											a(href="#") OR9842
+										td 使命召唤 10
+										td 
+											span.label.label-warning 已送货
+										td
+											.sparkbar(data-color="#00a65a", data-height="20") 90,80,90,-70,61,-83,63
+									tr
+										td
+											a(href="#") OR9842
+										td 使命召唤 10
+										td 
+											span.label.label-warning 已送货
+										td
+											.sparkbar(data-color="#00a65a", data-height="20") 90,80,90,-70,61,-83,63
+					.box-footer.clearfix
+						a.btn.btn-sm.btn-info.btn-flat.pull-left(href="#") 新增订单
+						a.btn.btn-sm.btn-default.btn-flat.pull-right(href="#") 查看全部订单
+			.col-md-4
+				.box.box-primary
+					.box-header.with-border
+						h3.box-title 最新产品
+						.box-tools.pull-right
+							button.btn.btn-box-tool(type="button",data-widget="collapse")
+								i.fa.fa-minus
+							button.btn.btn-box-tool(type="button",data-widget="remove")
+								i.fa.fa-times							
+						.box-body
+							ul.products-list.product-list-in-box
+								li.item
+									.product-img
+										img(src="/images/default-50x50.gif")
+									.product-info
+										a.product-title 三星电视
+											span.label.label-warning.pull-right 1800
+										span.product-description Samsung 32" 1080p 60Hz LED Smart HDTV
+								li.item
+									.product-img
+										img(src="/images/default-50x50.gif")
+									.product-info
+										a.product-title 三星电视
+											span.label.label-info.pull-right 700
+										span.product-description Samsung 32" 1080p 60Hz LED Smart HDTV
+								li.item
+									.product-img
+										img(src="/images/default-50x50.gif")
+									.product-info
+										a.product-title 三星电视
+											span.label.label-success.pull-right 1800
+										span.product-description Samsung 32" 1080p 60Hz LED Smart HDTV
+								li.item
+									.product-img
+										img(src="/images/default-50x50.gif")
+									.product-info
+										a.product-title 三星电视
+											span.label.label-danger.pull-right 1800
+										span.product-description Samsung 32" 1080p 60Hz LED Smart HDTV
+						.box-footer.text-center
+							a(href="#") 查看全部产品
+		h3.page-header 用户列表ul
+		.row
+			.col-md-4
+				.box.box-danger
+					.box-header.with-border
+						h3.box-title 最新成员
+						.box-tools.pull-right
+							span.label.label-danger 新增8人
+							button.btn.btn-box-tool(type="button",data-widget="collapse")
+								i.fa.fa-minus
+							button.btn.btn-box-tool(type="button",data-widget="remove")
+								i.fa.fa-times						
+					.box-body.no-padding
+						ul.users-list.clearfix
+							li
+								img(src="/images/user1-128x128.jpg")
+								a.users-list-name(href="#") 皮尔斯
+								span.user-list-data 今天
+							li
+								img(src="/images/user8-128x128.jpg")
+								a.users-list-name(href="#") 皮尔斯
+								span.user-list-data 昨天
+							li
+								img(src="/images/user7-128x128.jpg")
+								a.users-list-name(href="#") 皮尔斯
+								span.user-list-data 1月12日
+							li
+								img(src="/images/user6-128x128.jpg")
+								a.users-list-name(href="#") 皮尔斯
+								span.user-list-data 1月12日
+							li
+								img(src="/images/user2-160x160.jpg")
+								a.users-list-name(href="#") 皮尔斯
+								span.user-list-data 1月13日
+							li
+								img(src="/images/user5-128x128.jpg")
+								a.users-list-name(href="#") 皮尔斯
+								span.user-list-data 1月14日
+							li
+								img(src="/images/user4-128x128.jpg")
+								a.users-list-name(href="#") 皮尔斯
+								span.user-list-data 1月15日
+							li
+								img(src="/images/user3-128x128.jpg")
+								a.users-list-name(href="#") 皮尔斯
+								span.user-list-data 1月15日
+					.box-footer.text-center
+						a(href="#") 查看全部用户
+
+
+
 
 
