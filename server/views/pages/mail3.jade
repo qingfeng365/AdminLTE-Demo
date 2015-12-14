@@ -1,0 +1,65 @@
+extends ../layout
+
+block content
+	section.content-header
+		h1= title
+			small Welcome to #{title}
+		ol.breadcrumb
+			li
+				a(href="#")
+					i.fa.fa-dashboard  上级
+			li.active #{title}
+	section.content
+		.row
+			.col-md-3
+				a.btn.btn-primary.btn-block.margin-bottom(href='/mail3') 写邮件
+				.box.box-solid
+					.box-header.with-border
+						h3.box-title 文件夹
+						.box-tools
+							button.btn.btn-box-tool(data-widget='collapse')
+								i.fa.fa-minus
+					.box-body.no-padding
+						ul.nav.nav-pills.nav-stacked
+							li
+								a(href='/mail1')
+									i.fa.fa-inbox
+									span 收件箱
+									span.label.label-primary.pull-right 12
+							li
+								a(href='#')
+									i.fa.fa-envelope-o
+									span 已发送邮件
+							li
+								a(href='#')
+									i.fa.fa-file-text-o(href='#')
+									span 草稿
+							li
+								a
+									i.fa.fa-filter(href='#') 
+									span 垃圾邮件
+									span.label.label-warning.pull-right 65
+							li
+								a(href='#')
+									i.fa.fa-trash-o
+									span 已删除邮件
+				.box.box-solid
+					.box-header.with-border
+						h3.box-title 标签
+						.box-tools
+							button.btn.btn-box-tool(data-widget='collapse')
+								i.fa.fa-minus
+					.box-body.no-padding
+						ul.nav.nav-pills.nav-stacked
+							li
+								a(href='#')
+									i.fa.fa-circle-o.text-red
+									span 重要
+							li
+								a(href='#')
+									i.fa.fa-circle-o.text-blue
+									span 促销
+							li
+								a(href='#')
+									i.fa.fa-circle-o.text-yellow
+									span 社交
