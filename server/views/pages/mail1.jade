@@ -1,5 +1,8 @@
 extends ../layout
 
+block headsrc
+	link(href="/bower_components/AdminLTE/plugins/iCheck/flat/blue.css", rel="stylesheet")
+
 block content
 	section.content-header
 		h1= title
@@ -287,6 +290,11 @@ block content
 										i.fa.fa-chevron-left
 									button.btn.btn-default.btn-sm
 										i.fa.fa-chevron-right
+
+block pagesrc
+	script(src="/js/dashboard_indexdemo.js")
+	script(src="/bower_components/AdminLTE/plugins/iCheck/icheck.min.js")
+	script(src="../js/mail1.js")
 
 
 

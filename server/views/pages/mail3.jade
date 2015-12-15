@@ -1,5 +1,7 @@
 extends ../layout
 
+block headsrc	
+
 block content
 	section.content-header
 		h1= title
@@ -63,3 +65,92 @@ block content
 								a(href='#')
 									i.fa.fa-circle-o.text-yellow
 									span 社交
+
+			.col-md-9
+				.box.box-primary
+					.box-header.with-border
+						h3.box-title 阅读邮件
+						.box-tools.pull-right 
+							a.btn.btn-box-tool(href='#',data-toggle='tooltip',title='上封邮件')
+								i.fa.fa-chevron-left 
+							a.btn.btn-box-tool(href='#',data-toggle='tooltip',title='下封邮件')
+								i.fa.fa-chevron-right
+					.box-body.no-padding
+						.mailbox-read-info
+							h3 入手一部像电脑一样工作的Windows手机吧！
+							h5 来自：Microsoft Lumia
+								span.mailbox-read-time.pull-right 2015-12-11 下午5:51
+						.mailbox-controls.with-border.text-center
+							.btn-group
+								button.btn.btn-default.btn-sm(data-toggle='tooltip',data-container='body',title='删除')
+									i.fa.fa-trash-o
+								button.btn.btn-default.btn-sm(data-toggle='tooltip',data-container='body',title='回复')
+									i.fa.fa-reply
+								button.btn.btn-default.btn-sm(data-toggle='tooltip',data-container='body',title='转发')
+									i.fa.fa-share
+							button.btn.btn-default.btn-sm(data-toggle='tooltip',data-container='body',title='打印')
+								i.fa.fa-print
+						.mailbox-read-message							
+							h2 立即预订，率先拥有搭载Windows 10的 Lumia 950 和 950 XL
+							p 高端功能、匠心设计以及有史以来操作体验最棒的Windows 10系统——入手这部像”电脑”一样工作的手机吧！Lumia 950/Lumia 950 XL 现已全网开放预约，现在预约并且成功购买这两款手机的用户将有机会获得微软显示扩展坞，数量有限，先到先得！
+							h4 让您的手机像个人电脑一样工作
+							p 只要将您的Lumia 950或Lumia 950 XL连接至微软显示扩展坞，打开外接显示器、键盘和鼠标，然后会呈现出一个大屏的电脑工作环境，您会发现手机一秒变“电脑”，您可以轻松在屏幕上编辑Office办公软件、发送电子邮件，使您的工作效率大大提高。
+							h4 全新 Lumia 950 和 950 XL
+							p Lumia 950 和 950 XL 采用性能强大的处理器，具有出色的电池使用寿命，确保您获得卓越的性能，以及最佳的 Windows 10 体验。
+
+					.box-footer
+						ul.mailbox-attachments.clearfix
+							li
+								span.mailbox-attachment-icon
+									i.fa.fa-file-pdf-o
+								.mailbox-attachment-info
+									a.mailbox-attachment-name
+										i.fa.fa-paperclip
+										span &nbsp;Windows Mobile 10 新特性.pdf
+									span.mailbox-attachment-size &nbsp;1,245 KB
+										a.btn.btn-default.btn-xs.pull-right
+											i.fa.fa-cloud-download
+							li
+								span.mailbox-attachment-icon
+									i.fa.fa-file-word-o
+								.mailbox-attachment-info
+									a.mailbox-attachment-name
+										i.fa.fa-paperclip
+										span &nbsp;Lumia 950 950XL 产品规格.docx
+									span.mailbox-attachment-size &nbsp;1,245 KB
+										a.btn.btn-default.btn-xs.pull-right
+											i.fa.fa-cloud-download
+							li
+								span.mailbox-attachment-icon.has-img
+									img(src='https://i-1.prod-cdn.webapps.microsoft.com/r/image/view/-/5956136/extraHighRes/4/-/Lumia-950-XL-DSIM-hero-jpg.jpg')
+								.mailbox-attachment-info
+									a.mailbox-attachment-name(href='#')
+										i.fa.fa-camera
+										span &nbsp;产品图片1.jpg
+									span.mailbox-attachment-size &nbsp;2.67 MB
+										a.btn.btn-default.btn-xs.pull-right
+											i.fa.fa-cloud-download
+							li
+								span.mailbox-attachment-icon.has-img
+									img(src='https://i-1.prod-cdn.webapps.microsoft.com/r/image/view/-/5956142/extraHighRes/4/-/Lumia-950-XL--DSIM-performance-jpg.jpg')
+								.mailbox-attachment-info
+									a.mailbox-attachment-name(href='#')
+										i.fa.fa-camera
+										span &nbsp;产品图片2.jpg
+									span.mailbox-attachment-size &nbsp;2.67 MB
+										a.btn.btn-default.btn-xs.pull-right
+											i.fa.fa-cloud-download
+					.box-footer
+						.pull-right
+							button.btn.btn-default
+								i.fa.fa-reply
+								span &nbsp;回复
+							button.btn.btn-default
+								i.fa.fa-share
+								span &nbsp;转发
+						button.btn.btn-default
+							i.fa.fa-trash-o
+							span &nbsp;删除
+						button.btn.btn-default
+							i.fa.fa-print
+							span &nbsp;打印

@@ -1,4 +1,7 @@
-extends ../layout
+extends ../layout		
+
+block headsrc
+	link(href="/bower_components/AdminLTE/plugins/datatables/dataTables.bootstrap.css", rel="stylesheet")
 
 block content
 	section.content-header
@@ -854,3 +857,9 @@ block content
 									td 国4
 									td 5.6L/100km
 									td 5.59万元							
+
+block pagesrc	
+	script(src="/bower_components/AdminLTE/plugins/datatables/jquery.dataTables.min.js")
+	script(src="/bower_components/AdminLTE/plugins/datatables/dataTables.bootstrap.min.js")
+	script(src="/bower_components/AdminLTE/plugins/fastclick/fastclick.js")
+	script(src="../js/datatable.js")
