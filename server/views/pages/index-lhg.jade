@@ -2,17 +2,16 @@ extends ../layout
 
 block content
 	section.content-header
-		h1= title
-			small Welcome to #{title}
+		h1= title	
+			small 欢迎光临_#{title}
 		ol.breadcrumb
 			li
 				a(href="#")
-					i.fa.fa-dashboard  上级
+					i.fa.fa-dashboard 上级
 			li.active 当前
 	section.content
 		h3 info-box
 		.row
-			//- 3x2 = 6 , 6x2 = 12
 			.col-md-3.col-sm-6.col-xs-12
 				.info-box
 					span.info-box-icon.bg-aqua
@@ -40,7 +39,7 @@ block content
 						i.fa.fa-star-o
 					.info-box-content
 						span.info-box-text 关注
-						span.info-box-number 93,139												
+						span.info-box-number 93,139
 		.row
 			.col-md-3.col-sm-6.col-xs-12
 				.info-box.bg-aqua
@@ -51,42 +50,42 @@ block content
 						span.info-box-number 41,410
 						.progress
 							.progress-bar(style="width:70%")
-						span.progress-description
-							| 30天内增长70%		
+						span.prgress-description
+							| 30天内增长70%
 			.col-md-3.col-sm-6.col-xs-12
 				.info-box.bg-green
 					span.info-box-icon
-						i.fa.fa-thumbs-o-up
+						i.fa.fa-thumbs-o
 					.info-box-content
 						span.info-box-text 点赞
-						span.info-box-number 41,410
+						span.info-box-number 35,340
 						.progress
-							.progress-bar(style="width:70%")
-						span.progress-description
-							| 30天内增长70%	
+							.progress-bar(style="width:60%")
+						span.prgress-description
+							| 30天内增长60%
 			.col-md-3.col-sm-6.col-xs-12
 				.info-box.bg-yellow
 					span.info-box-icon
 						i.fa.fa-calendar
 					.info-box-content
 						span.info-box-text 事件
-						span.info-box-number 41,410
+						span.info-box-number 53,320
 						.progress
-							.progress-bar(style="width:70%")
-						span.progress-description
-							| 30天内增长70%		
+							.progress-bar(style="width:80%")
+						span.prgress-description
+							| 30天内增长80%
 			.col-md-3.col-sm-6.col-xs-12
 				.info-box.bg-red
 					span.info-box-icon
 						i.fa.fa-comments-o
 					.info-box-content
 						span.info-box-text 报道
-						span.info-box-number 41,410
+						span.info-box-number 58,340
 						.progress
-							.progress-bar(style="width:70%")
-						span.progress-description
-							| 30天内增长70%		
-		h3 small-box (用于显示状态)
+							.progress-bar(style="width:110%")
+						span.prgress-description
+							| 30天内增长110%
+		h3 small box (用于显示状态)
 		.row
 			.col-md-3.col-sm-6.col-xs-12
 				.small-box.bg-aqua
@@ -96,36 +95,35 @@ block content
 					.icon
 						i.fa.fa-shopping-cart
 					a.small-box-footer(href="#") 更多信息
-						i.fa.fa-arrow-circle-right
+						i.fa.fa-arrow-circle-left
 			.col-md-3.col-sm-6.col-xs-12
 				.small-box.bg-green
 					.inner
 						h3 53
-							sup(style="font-size:20px") %
+							sub(style="font-size:20px") %
 						p 增长率
 					.icon
-						i.ion.ion-stats-bars
+						i.fa.fa-stats-bars
 					a.small-box-footer(href="#") 更多信息
-						i.fa.fa-arrow-circle-right						
+						i.fa.fa-arrow-circle-right
 			.col-md-3.col-sm-6.col-xs-12
 				.small-box.bg-yellow
 					.inner
 						h3 44
 						p 注册数量
 					.icon
-						i.ion.ion-person-add
+						i.fa.fa-person-add
 					a.small-box-footer(href="#") 更多信息
-						i.fa.fa-arrow-circle-right		
+						i.fa.fa-arrow-circle-up
 			.col-md-3.col-sm-6.col-xs-12
 				.small-box.bg-red
 					.inner
-						h3 65
-						p 在线访问
+						h3 365
+						p 在线访问数
 					.icon
-						i.ion.ion-pie-graph
+						i.fa.fa-pie-graph
 					a.small-box-footer(href="#") 更多信息
-						i.fa.fa-arrow-circle-right
-
+						i.fa.fa-arrow-circle-down
 		h3.page-header 社交类widgets
 		.row
 			.col-md-4
@@ -141,7 +139,7 @@ block content
 								span.pull-right.badge.bg-blue 31
 							li: a(href="#") 任务
 								span.pull-right.badge.bg-aqua 5
-							li: a(href="#") 已完成
+							li: a(href="#") 已经完成
 								span.pull-right.badge.bg-green 12
 							li: a(href="#") 跟进
 								span.pull-right.badge.bg-red 842
@@ -154,39 +152,39 @@ block content
 						img.img-circle(src="/images/user7-128x128.jpg")
 					.box-footer
 						.row
-							.col-sm-4.border-right
+							.col-md-4.border-right
 								.description-block
 									h5.description-header 3,200
 									span.description-text 销售
-							.col-sm-4.border-right
+							.col-md-4.border-right
 								.description-block
 									h5.description-header 13,200
 									span.description-text 跟进
-							.col-sm-4
+							.col-md-4.border-right
 								.description-block
 									h5.description-header 35
 									span.description-text 产品
 			.col-md-4
 				.box.box-widget.widget-user
-					.widget-user-header.bg-black(style="background: url('/images/photo1.png') center center;")
+					.widget-user-header.bg-black(style="background:url('/images/photo1.png') center center;")
 						h3.widget-user-username 大卫.李
 						h5.widget-user-desc 首席设计师
 					.widget-user-image
 						img.img-circle(src="/images/user7-128x128.jpg")
 					.box-footer
 						.row
-							.col-sm-4.border-right
+							.col-md-4.border-right
 								.description-block
 									h5.description-header 3,200
 									span.description-text 销售
-							.col-sm-4.border-right
+							.col-md-4.border-right
 								.description-block
 									h5.description-header 13,200
 									span.description-text 跟进
-							.col-sm-4
+							.col-md-4.border-right
 								.description-block
 									h5.description-header 35
-									span.description-text 产品						
+									span.description-text 产品
 		h3.page-header 评论页widgets
 		.row
 			.col-md-6
@@ -200,107 +198,107 @@ block content
 						.box-tools
 							button.btn.btn-box-tool(type="button",data-toggle="tooltip",title="标记为已读")
 								i.fa.fa-circle-o
-							button.btn.btn-box-tool(type="button",data-widget="collapse")
+							button.btn.btn-box-tool(type="button",data-widget="collapse",title="最小化")
 								i.fa.fa-minus
-							button.btn.btn-box-tool(type="button",data-widget="remove")
+							button.btn.btn-box-tool(type="button",data-widget="remove",title="关闭")
 								i.fa.fa-times
-					.box-body
-						img.img-responsive.pad(src="/images/photo2.png",alt="图片")
-						p 今天上午拍了这张照片，你们怎么看？
-						button.btn.btn-default.btn-xs(type="button")
-							i.fa.fa-share
-							|  分享
-						button.btn.btn-default.btn-xs(type="button")
-							i.fa.fa-thumbs-o-up
-							|  点赞
-						span.pull-right.text-muted 赞 127 | 评论 3
-					.box-footer.box-comments
-						.box-comment
-							img.img-circle.img-sm(src="/images/user3-128x128.jpg")
-							.comment-text
-								span.username 玛丽亚
-									span.text-muted.pull-right 今天下午 8:03
-								| 事实上，页面的可读内容的布局，会让读者分心。
-						.box-comment
-							img.img-circle.img-sm(src="/images/user4-128x128.jpg")
-							.comment-text
-								span.username 斯塔克
-									span.text-muted.pull-right 今天下午 8:03
-								| 事实上，页面的可读内容的布局，会让读者分心。
-					.box-footer
-						form(action="#",method="post")
-							img.img-responsive.img-circle.img-sm(src="/images/user5-128x128.jpg")
-							.img-push
-								input.form-control.imput-sm(type="text",placeholder="输入评论内容...")
+						.box-body
+							img.img-responsive.pad(src="/images/photo2.png",alt="图片")
+							p 今天刚拍了这张照片，请你们参与评论。
+							button.btn.btn-default.btn-xs(type="button")
+								i.fa-fa-share
+								| 分享
+							button.btn.btn-default.btn-xs(type="button")
+								i.fa-fa-thumbs-o-up
+								| 点赞
+							span.pull-right.text-muted 赞 127 | 评论 3
+						.box-footer.box-comments
+							.box-comments
+								img.img-circle.img-sm(src="/images/user3-128x128.jpg")
+								.comment-text
+									span.username 玛丽亚
+										span.text-muted.pull-right 今天下午 20:03
+									| 事实上，页面的可读内容的布局，会让读者分心。
+							.box-comments
+								img.img-circle.img-sm(src="/images/user3-128x128.jpg")
+								.comment-text
+									span.username 斯塔克
+										span.text-muted.pull-right 今天下午 20:23
+									| 事实上，页面的可读内容的布局，会让读者分心...。
+						.box-footer
+							form(action="#",method="post")
+								img.img-responsive.img-circle.img-sm(src="/images/user4-128x128.jpg")
+								.img-push
+									input.form-control.imput-sm(type="text",placeholder="输入评论内容...")
 			.col-md-6
 				.box.box-widget
 					.box-header.with-border
 						.user-block
-							img.img-circle(src="/images/user7-128x128.jpg")
+							img.img-square(src="/images/user7-128x128.jpg")
 							span.username
 								a(href="#") 大卫.李
-							span.description 分享 - 今天7:30									
+							span.description 分享 - 今天7:30
 						.box-tools
 							button.btn.btn-box-tool(type="button",data-toggle="tooltip",title="标记为已读")
 								i.fa.fa-circle-o
 							button.btn.btn-box-tool(type="button",data-widget="collapse")
 								i.fa.fa-minus
-							button.btn.btn-box-tool(type="button",data-widget="remove")
+							button.btn.btn-box-tool(type="button",data-widget="<remove></remove>")
 								i.fa.fa-times
-					.box-body
-						p 
-							| Far Far Away , 风在空中一直绕 云像以前一样高 那些天使和海盗 渐渐老渐渐忘了。Far Far Away , 风在空中一直绕 云像以前一样高 那些天使和海盗 渐渐老渐渐忘了
-						p 
-							| Far Far Away , 风在空中一直绕 云像以前一样高 那些天使和海盗 渐渐老渐渐忘了。Far Far Away , 风在空中一直绕 云像以前一样高 那些天使和海盗 渐渐老渐渐忘了
-						.attachment-block.clearfix
-							img.attachment-img(src="/images/photo1.png",alt="图片")
-							.attachment-pushed
-								h4.attachment-heading
-									a(href="http://www.lipsum.com") Lorem ipsum text generator
-								.attachment-text 风在空中一直绕 云像以前一样高 那些天使和海盗 渐渐忘了。说明:有关附件可以放在这里。 Loremj 是印刷和排版虚拟... 
-									a(href="#") 更多
-						button.btn.btn-default.btn-xs(type="button")
-							i.fa.fa-share
-							|  分享 
-						button.btn.btn-default.btn-xs(type="button")
-							i.fa.fa-thumbs-o-up
-							|  点赞 
-						span.pull-right.text-muted 赞 127 | 评论 3
-					.box-footer.box-comments
-						.box-comment
-							img.img-circle.img-sm(src="/images/user3-128x128.jpg")
-							.comment-text
-								span.username 玛丽亚
-									span.text-muted.pull-right 今天下午 8:03
-								| 事实上，页面的可读内容的布局，会让读者分心。事实上，页面的可读内容的布局，会让读者分心。
-								.box-footer.box-comments
-									.box-comment
-									.box-comment
-										img.img-circle.img-sm(src="/images/user4-128x128.jpg")
-										.comment-text
-											span.username 斯塔克
-												span.text-muted.pull-right 今天下午 8:03
-											| 事实上，页面的可读内容的布局，会让读者分心。
-									.box-comment
-										img.img-circle.img-sm(src="/images/user4-128x128.jpg")
-										.comment-text
-											span.username 斯塔克
-												span.text-muted.pull-right 今天下午 8:03
-											| 事实上，页面的可读内容的布局，会让读者分心。
-						.box-comment
-							img.img-circle.img-sm(src="/images/user3-128x128.jpg")
-							.comment-text
-								span.username 玛丽亚
-									span.text-muted.pull-right 今天下午 8:03
-								| 事实上，页面的可读内容的布局，会让读者分心。事实上，页面的可读内容的布局，会让读者分心。事实上，页面的可读内容的布局，会让读者分心。事实上，页面的可读内容的布局，会让读者分心。
-					.box-footer
-						form(action="#",method="post")
+						.box-body
+							p
+								| Far Far Away , 风在空中一直绕 云像以前一样高 那些天使和海盗 渐渐老渐渐忘了。Far Far Away , 风在空中一直绕 云像以前一样高 那些天使和海盗 渐渐老渐渐忘了
+							p
+								| Far Far Away , 风在空中一直绕 云像以前一样高 那些天使和海盗 渐渐老渐渐忘了。Far Far Away , 风在空中一直绕 云像以前一样高 那些天使和海盗 渐渐老渐渐忘了
+							.attachment-block.clearfix
+								img.attachment-img(src="/images/photo1.png",alt="图片")
+								.attachment-pushed
+									h4.attachment-heading
+										a(href="http://www.lipsum.com") Lorem ipsum text generator
+									.attachment-text 风在空中一直绕 云像以前一样高 那些天使和海盗 渐渐忘了。说明:有关附件可以放在这里。 Loremj 是印刷和排版虚拟... 
+										a(href="#") 更多
+							button.btn.btn-default.btn-xs(type="button")
+								i.fa.fa-share
+								| 分享
+							button.btn.btn-default.btn-xs(type="button")
+								i.fa.fa-thumbs-o-up
+								| 点赞
+							span.pull-right.text-muted 赞 127 | 评论 3
+						.box-footer.box-comments
+							.box-comment
+								img.img-circle.img-sm(src="/images/user3-128x128.jpg")
+								.comment-text
+									span.username 玛丽亚
+										span.text-muted.pull-right 今天下午 8:03
+									| 事实上，页面的可读内容的布局，会让读者分心。事实上，页面的可读内容的布局，会让读者分心。
+									.box-footer.box-comments
+										.box-comment
+										.box-comment
+											img.img-circle.img-sm(src="/images/user4-128x128.jpg")
+											.comment-text
+												span.username 斯塔克
+													span.text-muted.pull-right 今天下午 8:03
+												| 事实上，页面的可读内容的布局，会让读者分心。
+										.box-comment
+											img.img-circle.img-sm(src="/images/user5-128x128.jpg")
+											.comment-text
+												span.username 斯塔.克
+													span.text-muted.pull-right 今天下午 7:23
+												| 事实上，页面的可读内容的布局，会让读者分心..。
+							.box-comment
+								img.img-circle.img-sm(src="/images/user3-128x128.jpg")
+								.comment-text
+									span.username 玛丽亚
+										span.text-muted.pull-right 今天下午 8:03
+									| 事实上，页面的可读内容的布局，会让读者分心。事实上，页面的可读内容的布局，会让读者分心。事实上，页面的可读内容的布局，会让读者分心。事实上，页面的可读内容的布局，会让读者分心。
+						.box-footer
+						form(active="#",method="post")
 							img.img-responsive.img-circle.img-sm(src="/images/user5-128x128.jpg")
 							.img-push
 								input.form-control.imput-sm(type="text",placeholder="输入评论内容...")
 		h3.page-header box-tools
 		.row
-			.col-md-3
+			.col-sm-3
 				.box.box-default.collapsed-box
 					.box-header.with-border
 						h3.box-title 默认收缩
@@ -308,7 +306,7 @@ block content
 							button.btn.btn-box-tool(type="button",data-widget="collapse")
 								i.fa.fa-plus
 					.box-body 内容内容内容内容内容内容
-			.col-md-3
+			.col-sm-3
 				.box.box-success
 					.box-header.with-border
 						h3.box-title 可移除
@@ -316,7 +314,7 @@ block content
 							button.btn.btn-box-tool(type="button",data-widget="remove")
 								i.fa.fa-times
 					.box-body 内容内容内容内容内容内容
-			.col-md-3
+			.col-sm-3
 				.box.box-warning
 					.box-header.with-border
 						h3.box-title 可收缩
@@ -324,7 +322,7 @@ block content
 							button.btn.btn-box-tool(type="button",data-widget="collapse")
 								i.fa.fa-minus
 					.box-body 内容内容内容内容内容内容
-			.col-md-3
+			.col-sm-3
 				.box.box-danger
 					.box-header.with-border
 						h3.box-title 加载中...
@@ -332,7 +330,7 @@ block content
 					.overlay
 						i.fa.fa-refresh.fa-spin
 		.row
-			.col-md-3
+			.col-sm-3
 				.box.box-default.collapsed-box.box-solid
 					.box-header.with-border
 						h3.box-title 默认收缩
@@ -340,7 +338,7 @@ block content
 							button.btn.btn-box-tool(type="button",data-widget="collapse")
 								i.fa.fa-plus
 					.box-body 内容内容内容内容内容内容
-			.col-md-3
+			.col-sm-3
 				.box.box-success.box-solid
 					.box-header.with-border
 						h3.box-title 可移除
@@ -348,7 +346,7 @@ block content
 							button.btn.btn-box-tool(type="button",data-widget="remove")
 								i.fa.fa-times
 					.box-body 内容内容内容内容内容内容
-			.col-md-3
+			.col-sm-3
 				.box.box-warning.box-solid
 					.box-header.with-border
 						h3.box-title 可收缩
@@ -356,7 +354,7 @@ block content
 							button.btn.btn-box-tool(type="button",data-widget="collapse")
 								i.fa.fa-minus
 					.box-body 内容内容内容内容内容内容
-			.col-md-3
+			.col-sm-3
 				.box.box-danger.box-solid
 					.box-header.with-border
 						h3.box-title 加载中...
@@ -365,7 +363,7 @@ block content
 						i.fa.fa-refresh.fa-spin
 		h3.page-header 对话
 		.row
-			.col-md-3
+			.col-sm-3
 				.box.box-primary.direct-chat.direct-chat-primary
 					.box-header.with-border
 						h3.box-title 对话
@@ -373,7 +371,7 @@ block content
 							span.badge.bg-light-blue(data-toggle="tooltip",title="3条新消息") 3
 							button.btn.btn-box-tool(type="button",data-widget="collapse")
 								i.fa.fa-minus
-							button.btn.btn-box-tool(type="button",data-toggle="tooltip",title="联系人",data-widget="chat-pane-toggle")
+							button.btn.btn-box-tool(type="button",data-toggle="tooltip",data-widget="chat-pane-toggle",title="联系人")
 								i.fa.fa-comments
 							button.btn.btn-box-tool(type="button",data-widget="remove")
 								i.fa.fa-times
@@ -388,11 +386,11 @@ block content
 							.direct-chat-msg.right
 								.direct-chat-info.clearfix
 									span.direct-chat-name.pull-right 莎拉
-									span.direct-chat-timestamp.pull-left 1-23 下午2:05
+									span.direct-chat-timestamp.pull-left 1-23 下午2:00
 								img.direct-chat-img(src="/images/user3-128x128.jpg")
 								.direct-chat-text 你最好相信它！
 						.direct-chat-contacts
-							ul.contacts-list
+							ul.comtacts-list
 								li
 									a(href="#")
 										img.contacts-list-img(src="/images/user1-128x128.jpg")
@@ -401,20 +399,20 @@ block content
 												small.coltacts-list-data.pull-right 2015-2-28
 											span.contacts-list-msg 你最近好吗...
 					.box-footer
-						form(action="#", method="post")
+						form(active="#",method="post")
 							.input-group
-								input.form-control(type="text",name="message",placeholder="输入消息...")
+								input.form-control(type="text",name="message",placeholder="请输入消息...")
 								span.input-group-btn
 									button.btn.btn-primary.btn-flat(type="submit") 发送
-			.col-md-3
-				.box.box-success.direct-chat.direct-chat-success
+			.col-sm-3
+				.box.box-success.direct-chat.direct-chat-success.box-solid
 					.box-header.with-border
 						h3.box-title 对话
 						.box-tools.pull-right
 							span.badge.bg-light-blue(data-toggle="tooltip",title="3条新消息") 3
 							button.btn.btn-box-tool(type="button",data-widget="collapse")
 								i.fa.fa-minus
-							button.btn.btn-box-tool(type="button",data-toggle="tooltip",title="联系人",data-widget="chat-pane-toggle")
+							button.btn.btn-box-tool(type="button",data-toggle="tooltip",data-widget="chat-pane-toggle",title="联系人")
 								i.fa.fa-comments
 							button.btn.btn-box-tool(type="button",data-widget="remove")
 								i.fa.fa-times
@@ -429,11 +427,11 @@ block content
 							.direct-chat-msg.right
 								.direct-chat-info.clearfix
 									span.direct-chat-name.pull-right 莎拉
-									span.direct-chat-timestamp.pull-left 1-23 下午2:05
+									span.direct-chat-timestamp.pull-left 1-23 下午2:00
 								img.direct-chat-img(src="/images/user3-128x128.jpg")
 								.direct-chat-text 你最好相信它！
 						.direct-chat-contacts
-							ul.contacts-list
+							ul.comtacts-list
 								li
 									a(href="#")
 										img.contacts-list-img(src="/images/user1-128x128.jpg")
@@ -442,12 +440,12 @@ block content
 												small.coltacts-list-data.pull-right 2015-2-28
 											span.contacts-list-msg 你最近好吗...
 					.box-footer
-						form(action="#", method="post")
+						form(active="#",method="post")
 							.input-group
-								input.form-control(type="text",name="message",placeholder="输入消息...")
+								input.form-control(type="text",name="message",placeholder="请输入消息...")
 								span.input-group-btn
 									button.btn.btn-primary.btn-flat(type="submit") 发送
-			.col-md-3
+			.col-sm-3
 				.box.box-warning.direct-chat.direct-chat-warning
 					.box-header.with-border
 						h3.box-title 对话
@@ -455,7 +453,7 @@ block content
 							span.badge.bg-light-blue(data-toggle="tooltip",title="3条新消息") 3
 							button.btn.btn-box-tool(type="button",data-widget="collapse")
 								i.fa.fa-minus
-							button.btn.btn-box-tool(type="button",data-toggle="tooltip",title="联系人",data-widget="chat-pane-toggle")
+							button.btn.btn-box-tool(type="button",data-toggle="tooltip",data-widget="chat-pane-toggle",title="联系人")
 								i.fa.fa-comments
 							button.btn.btn-box-tool(type="button",data-widget="remove")
 								i.fa.fa-times
@@ -470,11 +468,11 @@ block content
 							.direct-chat-msg.right
 								.direct-chat-info.clearfix
 									span.direct-chat-name.pull-right 莎拉
-									span.direct-chat-timestamp.pull-left 1-23 下午2:05
+									span.direct-chat-timestamp.pull-left 1-23 下午2:00
 								img.direct-chat-img(src="/images/user3-128x128.jpg")
 								.direct-chat-text 你最好相信它！
 						.direct-chat-contacts
-							ul.contacts-list
+							ul.comtacts-list
 								li
 									a(href="#")
 										img.contacts-list-img(src="/images/user1-128x128.jpg")
@@ -483,20 +481,20 @@ block content
 												small.coltacts-list-data.pull-right 2015-2-28
 											span.contacts-list-msg 你最近好吗...
 					.box-footer
-						form(action="#", method="post")
+						form(active="#",method="post")
 							.input-group
-								input.form-control(type="text",name="message",placeholder="输入消息...")
+								input.form-control(type="text",name="message",placeholder="请输入消息...")
 								span.input-group-btn
 									button.btn.btn-primary.btn-flat(type="submit") 发送
-			.col-md-3
-				.box.box-danger.direct-chat.direct-chat-danger
+			.col-sm-3
+				.box.box-danger.direct-chat.direct-chat-danger.box-solid
 					.box-header.with-border
 						h3.box-title 对话
 						.box-tools.pull-right
 							span.badge.bg-light-blue(data-toggle="tooltip",title="3条新消息") 3
 							button.btn.btn-box-tool(type="button",data-widget="collapse")
 								i.fa.fa-minus
-							button.btn.btn-box-tool(type="button",data-toggle="tooltip",title="联系人",data-widget="chat-pane-toggle")
+							button.btn.btn-box-tool(type="button",data-toggle="tooltip",data-widget="chat-pane-toggle",title="联系人")
 								i.fa.fa-comments
 							button.btn.btn-box-tool(type="button",data-widget="remove")
 								i.fa.fa-times
@@ -511,11 +509,11 @@ block content
 							.direct-chat-msg.right
 								.direct-chat-info.clearfix
 									span.direct-chat-name.pull-right 莎拉
-									span.direct-chat-timestamp.pull-left 1-23 下午2:05
+									span.direct-chat-timestamp.pull-left 1-23 下午2:00
 								img.direct-chat-img(src="/images/user3-128x128.jpg")
 								.direct-chat-text 你最好相信它！
 						.direct-chat-contacts
-							ul.contacts-list
+							ul.comtacts-list
 								li
 									a(href="#")
 										img.contacts-list-img(src="/images/user1-128x128.jpg")
@@ -524,9 +522,9 @@ block content
 												small.coltacts-list-data.pull-right 2015-2-28
 											span.contacts-list-msg 你最近好吗...
 					.box-footer
-						form(action="#", method="post")
+						form(active="#",method="post")
 							.input-group
-								input.form-control(type="text",name="message",placeholder="输入消息...")
+								input.form-control(type="text",name="message",placeholder="请输入消息...")
 								span.input-group-btn
 									button.btn.btn-primary.btn-flat(type="submit") 发送
 		h3.page-header 普通表格table VS 产品列表ul
@@ -554,58 +552,51 @@ block content
 										td
 											a(href="#") OR9842
 										td 使命召唤 10
-										td 
+										td
 											span.label.label-success 已交货
 										td
-											.sparkbar(data-color="#00a65a", data-height="20") 90,80,90,-70,61,-83,63
 									tr
 										td
-											a(href="#") OR1848
-										td 使命召唤 10
-										td 
+											a(href="#") OR9843
+										td 使命召唤 11
+										td
 											span.label.label-warning 待处理
-										td
-											.sparkbar(data-color="#f39c12", data-height="20") 90,80,-90,70,61,-83,68
+										td 
 									tr
 										td
-											a(href="#") OR9842
-										td 使命召唤 10
-										td 
+											a(href="#") OR9844
+										td 使命召唤 12
+										td
 											span.label.label-danger 已批准
-										td
-											.sparkbar(data-color="#f56954", data-height="20") 90,-80,90,70,-61,83,63
+										td 
 									tr
 										td
-											a(href="#") OR7429
+											a(href="#") OR9845
 										td 使命召唤 10
-										td 
+										td
 											span.label.label-info 处理中
-										td
-											.sparkbar(data-color="#00c0ef", data-height="20") 90,80,-90,70,-61,83,63
+										td 
 									tr
 										td
-											a(href="#") OR9842
+											a(href="#") OR9846
 										td 使命召唤 10
-										td 
-											span.label.label-warning 已送货
 										td
-											.sparkbar(data-color="#00a65a", data-height="20") 90,80,90,-70,61,-83,63
+											span.label.label-warning 已送货
+										td 
 									tr
 										td
-											a(href="#") OR9842
-										td 使命召唤 10
-										td 
+											a(href="#") OR9847
+										td 使命召唤 12
+										td
 											span.label.label-warning 已送货
 										td
-											.sparkbar(data-color="#00a65a", data-height="20") 90,80,90,-70,61,-83,63
 									tr
 										td
-											a(href="#") OR9842
-										td 使命召唤 10
-										td 
-											span.label.label-warning 已送货
+											a(href="#") OR9848
+										td 使命召唤 14
 										td
-											.sparkbar(data-color="#00a65a", data-height="20") 90,80,90,-70,61,-83,63
+											span.label.label-warning 已送货
+										td   
 					.box-footer.clearfix
 						a.btn.btn-sm.btn-info.btn-flat.pull-left(href="#") 新增订单
 						a.btn.btn-sm.btn-default.btn-flat.pull-right(href="#") 查看全部订单
@@ -617,42 +608,42 @@ block content
 							button.btn.btn-box-tool(type="button",data-widget="collapse")
 								i.fa.fa-minus
 							button.btn.btn-box-tool(type="button",data-widget="remove")
-								i.fa.fa-times							
-						.box-body
-							ul.products-list.product-list-in-box
-								li.item
-									.product-img
-										img(src="/images/default-50x50.gif")
-									.product-info
-										a.product-title 三星电视
-											span.label.label-warning.pull-right 1800
-										span.product-description Samsung 32" 1080p 60Hz LED Smart HDTV
-								li.item
-									.product-img
-										img(src="/images/default-50x50.gif")
-									.product-info
-										a.product-title 三星电视
-											span.label.label-info.pull-right 700
-										span.product-description Samsung 32" 1080p 60Hz LED Smart HDTV
-								li.item
-									.product-img
-										img(src="/images/default-50x50.gif")
-									.product-info
-										a.product-title 三星电视
-											span.label.label-success.pull-right 1800
-										span.product-description Samsung 32" 1080p 60Hz LED Smart HDTV
-								li.item
-									.product-img
-										img(src="/images/default-50x50.gif")
-									.product-info
-										a.product-title 三星电视
-											span.label.label-danger.pull-right 1800
-										span.product-description Samsung 32" 1080p 60Hz LED Smart HDTV
-						.box-footer.text-center
-							a(href="#") 查看全部产品
-		h3.page-header 用户列表ul
+								i.fa.fa-times
+					.box-body
+						ul.products-list.products-list-in-box
+							li.item
+								.product-img
+									img(src="/images/default-50x50.gif")
+								.product-info
+									a.product-title 三星电视
+										span.label.label-warning.pull-right 1800
+									span.product-description Samsung 32" 1080p 60Hz LED Smart HDTV
+							li.item
+								.product-img
+									img(src="/images/default-50x50.gif")
+								.product-info
+									a.product-title 三星电视
+										span.label.label-info.pull-right 700
+									span.product-description Samsung 32" 1080p 60Hz LED Smart HDTV
+							li.item
+								.product-img
+									img(src="/images/default-50x50.gif")
+								.product-info
+									a.product-title 三星电视
+										span.label.label-success.pull-right 1800
+									span.product-description Samsung 32" 1080p 60Hz LED Smart HDTV
+							li.item
+								.product-img
+									img(src="/images/default-50x50.gif")
+								.product-info
+									a.product-title 三星电视
+										span.label.label-danger.pull-right 700
+									span.product-description Samsung 32" 1080p 60Hz LED Smart HDTV
+					.box-footer.text-center
+						a(href="#") 查看全部产品
+		h3.page-header 用户列表UL
 		.row
-			.col-md-4
+			.col-sm-4
 				.box.box-danger
 					.box-header.with-border
 						h3.box-title 最新成员
@@ -661,45 +652,40 @@ block content
 							button.btn.btn-box-tool(type="button",data-widget="collapse")
 								i.fa.fa-minus
 							button.btn.btn-box-tool(type="button",data-widget="remove")
-								i.fa.fa-times						
+								i.fa.fa-times
 					.box-body.no-padding
 						ul.users-list.clearfix
 							li
 								img(src="/images/user1-128x128.jpg")
-								a.users-list-name(href="#") 皮尔斯
+								a.users-list-name(href="#") 皮尔斯1
 								span.user-list-data 今天
 							li
-								img(src="/images/user8-128x128.jpg")
-								a.users-list-name(href="#") 皮尔斯
+								img(src="/images/user2-160x160.jpg")
+								a.users-list-name(href="#") 皮尔斯2
 								span.user-list-data 昨天
 							li
-								img(src="/images/user7-128x128.jpg")
-								a.users-list-name(href="#") 皮尔斯
+								img(src="/images/user3-128x128.jpg")
+								a.users-list-name(href="#") 皮尔斯3
 								span.user-list-data 1月12日
-							li
-								img(src="/images/user6-128x128.jpg")
-								a.users-list-name(href="#") 皮尔斯
-								span.user-list-data 1月12日
-							li
-								img(src="/images/user2-160x160.jpg")
-								a.users-list-name(href="#") 皮尔斯
-								span.user-list-data 1月13日
-							li
-								img(src="/images/user5-128x128.jpg")
-								a.users-list-name(href="#") 皮尔斯
-								span.user-list-data 1月14日
 							li
 								img(src="/images/user4-128x128.jpg")
-								a.users-list-name(href="#") 皮尔斯
+								a.users-list-name(href="#") 皮尔斯4
+								span.user-list-data 1月12日
+							li
+								img(src="/images/user5-128x128.jpg")
+								a.users-list-name(href="#") 皮尔斯5
+								span.user-list-data 1月13日
+							li
+								img(src="/images/user6-128x128.jpg")
+								a.users-list-name(href="#") 皮尔斯6
+								span.user-list-data 1月14日
+							li
+								img(src="/images/user7-128x128.jpg")
+								a.users-list-name(href="#") 皮尔斯7
 								span.user-list-data 1月15日
 							li
-								img(src="/images/user3-128x128.jpg")
-								a.users-list-name(href="#") 皮尔斯
+								img(src="/images/user8-128x128.jpg")
+								a.users-list-name(href="#") 皮尔斯8
 								span.user-list-data 1月15日
 					.box-footer.text-center
 						a(href="#") 查看全部用户
-
-
-
-
-

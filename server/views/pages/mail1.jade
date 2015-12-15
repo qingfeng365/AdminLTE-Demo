@@ -1,0 +1,300 @@
+extends ../layout
+
+block headsrc
+	link(href="/bower_components/AdminLTE/plugins/iCheck/flat/blue.css", rel="stylesheet")
+
+block content
+	section.content-header
+		h1= title
+			small Welcome to #{title}
+		ol.breadcrumb
+			li
+				a(href="#")
+					i.fa.fa-dashboard  上级
+			li.active #{title}
+	section.content
+		.row
+			.col-md-3
+				a.btn.btn-primary.btn-block.margin-bottom(href='/mail3') 写邮件
+				.box.box-solid
+					.box-header.with-border
+						h3.box-title 文件夹
+						.box-tools
+							button.btn.btn-box-tool(data-widget='collapse')
+								i.fa.fa-minus
+					.box-body.no-padding
+						ul.nav.nav-pills.nav-stacked
+							li
+								a(href='/mail1')
+									i.fa.fa-inbox
+									span 收件箱
+									span.label.label-primary.pull-right 12
+							li
+								a(href='#')
+									i.fa.fa-envelope-o
+									span 已发送邮件
+							li
+								a(href='#')
+									i.fa.fa-file-text-o(href='#')
+									span 草稿
+							li
+								a
+									i.fa.fa-filter(href='#') 
+									span 垃圾邮件
+									span.label.label-warning.pull-right 65
+							li
+								a(href='#')
+									i.fa.fa-trash-o
+									span 已删除邮件
+				.box.box-solid
+					.box-header.with-border
+						h3.box-title 标签
+						.box-tools
+							button.btn.btn-box-tool(data-widget='collapse')
+								i.fa.fa-minus
+					.box-body.no-padding
+						ul.nav.nav-pills.nav-stacked
+							li
+								a(href='#')
+									i.fa.fa-circle-o.text-red
+									span 重要
+							li
+								a(href='#')
+									i.fa.fa-circle-o.text-blue
+									span 促销
+							li
+								a(href='#')
+									i.fa.fa-circle-o.text-yellow
+									span 社交
+			.col-md-9
+				.box.box-primary
+					.box-header.with-border
+						h3.box-title 收件箱
+						.box-tools.pull-right
+							.has-feedback
+								input.form-control.input-sm(placeholder='查找邮件')
+							span.glyphicon.glyphicon-search.form-control-feedback
+					.box-body.no-padding
+						.mailbox-controls
+							button.btn.btn-default.btn-sm.checkbox-toggle
+								i.fa.fa-square-o
+							.btn-group
+								button.btn.btn-default.btn-sm
+									i.fa.fa-trash-o
+								button.btn.btn-default.btn-sm
+									i.fa.fa-reply
+								button.btn.btn-default.btn-sm
+									i.fa.fa-share
+							button.btn.btn-default.btn-sm
+								i.fa.fa-refresh
+							.pull-right 1-50/200
+								.btn-group
+									button.btn.btn-default.btn-sm
+										i.fa.fa-chevron-left
+									button.btn.btn-default.btn-sm
+										i.fa.fa-chevron-right
+						.table-responsive.mailbox-messages
+							table.table.table-hover.table-striped
+								tbody
+									tr
+										td
+											input(type='checkbox')
+										td.mailbox-star
+											a(href='#')
+												i.fa.fa-star.text-yellow
+										td.mailbox-name
+											a(href='#') Microsoft Lumia
+										td.mailbox-subject
+											a(href='#') 入手一部像电脑一样工作的Windows手机吧！
+										td.mailbox-attachment
+										td.mailbox-date 5分钟之前
+									tr
+										td
+											input(type='checkbox')
+										td.mailbox-star
+											a(href='#')
+												i.fa.fa-star-o.text-yellow
+										td.mailbox-name
+											a(href='#') Microsoft Lumia
+										td.mailbox-subject
+											a(href='#') 入手一部像电脑一样工作的Windows手机吧！
+										td.mailbox-attachment
+											i.fa.fa-paperclip
+										td.mailbox-date 28分钟之前
+									tr
+										td
+											input(type='checkbox')
+										td.mailbox-star
+											a(href='#')
+												i.fa.fa-star-o.text-yellow
+										td.mailbox-name
+											a(href='#') Microsoft Lumia
+										td.mailbox-subject
+											a(href='#') 入手一部像电脑一样工作的Windows手机吧！
+										td.mailbox-attachment
+											i.fa.fa-paperclip
+										td.mailbox-date 11小时之前
+									tr
+										td
+											input(type='checkbox')
+										td.mailbox-star
+											a(href='#')
+												i.fa.fa-star.text-yellow
+										td.mailbox-name
+											a(href='#') Microsoft Lumia
+										td.mailbox-subject
+											a(href='#') 入手一部像电脑一样工作的Windows手机吧！
+										td.mailbox-attachment
+										td.mailbox-date 15小时之前
+									tr
+										td
+											input(type='checkbox')
+										td.mailbox-star
+											a(href='#')
+												i.fa.fa-star-o.text-yellow
+										td.mailbox-name
+											a(href='#') Microsoft Lumia
+										td.mailbox-subject
+											a(href='#') 入手一部像电脑一样工作的Windows手机吧！
+										td.mailbox-attachment
+											i.fa.fa-paperclip
+										td.mailbox-date 昨天
+									tr
+										td
+											input(type='checkbox')
+										td.mailbox-star
+											a(href='#')
+												i.fa.fa-star-o.text-yellow
+										td.mailbox-name
+											a(href='#') Microsoft Lumia
+										td.mailbox-subject
+											a(href='#') 入手一部像电脑一样工作的Windows手机吧！
+										td.mailbox-attachment
+											i.fa.fa-paperclip
+										td.mailbox-date 2天前
+									tr
+										td
+											input(type='checkbox')
+										td.mailbox-star
+											a(href='#')
+												i.fa.fa-star.text-yellow
+										td.mailbox-name
+											a(href='#') Microsoft Lumia
+										td.mailbox-subject
+											a(href='#') 入手一部像电脑一样工作的Windows手机吧！
+										td.mailbox-attachment
+										td.mailbox-date 2天前
+									tr
+										td
+											input(type='checkbox')
+										td.mailbox-star
+											a(href='#')
+												i.fa.fa-star.text-yellow
+										td.mailbox-name
+											a(href='#') Microsoft Lumia
+										td.mailbox-subject
+											a(href='#') 入手一部像电脑一样工作的Windows手机吧！
+										td.mailbox-attachment
+										td.mailbox-date 3天前
+									tr
+										td
+											input(type='checkbox')
+										td.mailbox-star
+											a(href='#')
+												i.fa.fa-star-o.text-yellow
+										td.mailbox-name
+											a(href='#') Microsoft Lumia
+										td.mailbox-subject
+											a(href='#') 入手一部像电脑一样工作的Windows手机吧！
+										td.mailbox-attachment
+											i.fa.fa-paperclip
+										td.mailbox-date 4天前
+									tr
+										td
+											input(type='checkbox')
+										td.mailbox-star
+											a(href='#')
+												i.fa.fa-star.text-yellow
+										td.mailbox-name
+											a(href='#') Microsoft Lumia
+										td.mailbox-subject
+											a(href='#') 入手一部像电脑一样工作的Windows手机吧！
+										td.mailbox-attachment
+										td.mailbox-date 5天前
+									tr
+										td
+											input(type='checkbox')
+										td.mailbox-star
+											a(href='#')
+												i.fa.fa-star-o.text-yellow
+										td.mailbox-name
+											a(href='#') Microsoft Lumia
+										td.mailbox-subject
+											a(href='#') 入手一部像电脑一样工作的Windows手机吧！
+										td.mailbox-attachment
+											i.fa.fa-paperclip
+										td.mailbox-date 5天前
+									tr
+										td
+											input(type='checkbox')
+										td.mailbox-star
+											a(href='#')
+												i.fa.fa-star-o.text-yellow
+										td.mailbox-name
+											a(href='#') Microsoft Lumia
+										td.mailbox-subject
+											a(href='#') 入手一部像电脑一样工作的Windows手机吧！
+										td.mailbox-attachment
+											i.fa.fa-paperclip
+										td.mailbox-date 7天前
+									tr
+										td
+											input(type='checkbox')
+										td.mailbox-star
+											a(href='#')
+												i.fa.fa-star.text-yellow
+										td.mailbox-name
+											a(href='#') Microsoft Lumia
+										td.mailbox-subject
+											a(href='#') 入手一部像电脑一样工作的Windows手机吧！
+										td.mailbox-attachment
+										td.mailbox-date 7天前
+									tr
+										td
+											input(type='checkbox')
+										td.mailbox-star
+											a(href='#')
+												i.fa.fa-star.text-yellow
+										td.mailbox-name
+											a(href='#') Microsoft Lumia
+										td.mailbox-subject
+											a(href='#') 入手一部像电脑一样工作的Windows手机吧！
+										td.mailbox-attachment
+										td.mailbox-date 10天前
+					.box-footer.no-padding
+						.mailbox-controls
+							button.btn.btn-default.btn-sm.checkbox-toggle
+								i.fa.fa-square-o
+							.btn-group
+								button.btn.btn-default.btn-sm
+									i.fa.fa-trash-o
+								button.btn.btn-default.btn-sm
+									i.fa.fa-reply
+								button.btn.btn-default.btn-sm
+									i.fa.fa-share
+							button.btn.btn-default.btn-sm
+								i.fa.fa-refresh
+							.pull-right 1-50/200
+								.btn-group
+									button.btn.btn-default.btn-sm
+										i.fa.fa-chevron-left
+									button.btn.btn-default.btn-sm
+										i.fa.fa-chevron-right
+
+block pagesrc
+	script(src="/js/dashboard_indexdemo.js")
+	script(src="/bower_components/AdminLTE/plugins/iCheck/icheck.min.js")
+	script(src="../js/mail1.js")
+
+
+
