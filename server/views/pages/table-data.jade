@@ -1,0 +1,865 @@
+extends ../layout		
+
+block headsrc
+	link(href="/bower_components/AdminLTE/plugins/datatables/dataTables.bootstrap.css", rel="stylesheet")
+
+block content
+	section.content-header
+		h1= title
+			small Welcome to #{title}
+		ol.breadcrumb
+			li
+				a(href="#")
+					i.fa.fa-dashboard  上级
+			li.active #{title}
+	section.content
+		.row
+			.col-xs-12
+				.box
+					.box-header
+						h3.box-title 数据表格(自动分页，表头排序)
+					.box-body
+						table.table.table-bordered.table-hover#example2
+							thead
+								tr
+									th 厂牌
+									th 车系
+									th 排量
+									th 年款
+									th 变速箱
+									th 环保标准
+									th 综合工况油耗
+									th 标准售价
+							tbody
+								tr
+									td 大众
+									td POLO
+									td 1.4L
+									td 2014
+									td 手动
+									td 国5
+									td 5.8L/100km
+									td 7.59万元
+								tr
+									td 北京现代
+									td 瑞纳
+									td 1.4L
+									td 2014
+									td 手动
+									td 国4,京5
+									td 6.1L/100km
+									td 7.39万元
+								tr
+									td 一汽丰田
+									td 威驰
+									td 1.3L
+									td 2014
+									td 手动
+									td 国4,国5
+									td 5.4L/100km
+									td 6.98万元
+								tr
+									td 上汽通用 
+									td 雪佛兰
+									td 1.3L
+									td 2015
+									td 手动
+									td 国5
+									td 5.3L/100km
+									td 5.99万元
+								tr
+									td 东风悦达起亚 
+									td K2
+									td 1.4L
+									td 2015
+									td 手动
+									td 国4,国5
+									td 6.1L/100km
+									td 7.29万元
+								tr
+									td 广汽本田 
+									td 飞度
+									td 1.5L
+									td 2014
+									td CVT无级变速
+									td 国4,国5
+									td 5.3L/100km
+									td 8.18万元
+								tr
+									td 东风本田 
+									td 哥瑞
+									td 1.5L
+									td 2016
+									td CVT无级变速
+									td 国5
+									td 5.4L/100km
+									td 8.98万元
+								tr
+									td 广汽丰田 
+									td YARiS
+									td 1.5L
+									td 2015
+									td 自动
+									td 国4,国5
+									td 5.7L/100km
+									td 8.58万元
+								tr
+									td 长安轿车 
+									td CX20
+									td 1.4L
+									td 2014
+									td 手动
+									td 国4
+									td 5.6L/100km
+									td 5.59万元
+								tr
+									td 大众
+									td POLO
+									td 1.4L
+									td 2014
+									td 手动
+									td 国5
+									td 5.8L/100km
+									td 7.59万元
+								tr
+									td 北京现代
+									td 瑞纳
+									td 1.4L
+									td 2014
+									td 手动
+									td 国4,京5
+									td 6.1L/100km
+									td 7.39万元
+								tr
+									td 一汽丰田
+									td 威驰
+									td 1.3L
+									td 2014
+									td 手动
+									td 国4,国5
+									td 5.4L/100km
+									td 6.98万元
+								tr
+									td 上汽通用 
+									td 雪佛兰
+									td 1.3L
+									td 2015
+									td 手动
+									td 国5
+									td 5.3L/100km
+									td 5.99万元
+								tr
+									td 东风悦达起亚 
+									td K2
+									td 1.4L
+									td 2015
+									td 手动
+									td 国4,国5
+									td 6.1L/100km
+									td 7.29万元
+								tr
+									td 广汽本田 
+									td 飞度
+									td 1.5L
+									td 2014
+									td CVT无级变速
+									td 国4,国5
+									td 5.3L/100km
+									td 8.18万元
+								tr
+									td 东风本田 
+									td 哥瑞
+									td 1.5L
+									td 2016
+									td CVT无级变速
+									td 国5
+									td 5.4L/100km
+									td 8.98万元
+								tr
+									td 广汽丰田 
+									td YARiS
+									td 1.5L
+									td 2015
+									td 自动
+									td 国4,国5
+									td 5.7L/100km
+									td 8.58万元
+								tr
+									td 长安轿车 
+									td CX20
+									td 1.4L
+									td 2014
+									td 手动
+									td 国4
+									td 5.6L/100km
+									td 5.59万元
+								tr
+									td 大众
+									td POLO
+									td 1.4L
+									td 2014
+									td 手动
+									td 国5
+									td 5.8L/100km
+									td 7.59万元
+								tr
+									td 北京现代
+									td 瑞纳
+									td 1.4L
+									td 2014
+									td 手动
+									td 国4,京5
+									td 6.1L/100km
+									td 7.39万元
+								tr
+									td 一汽丰田
+									td 威驰
+									td 1.3L
+									td 2014
+									td 手动
+									td 国4,国5
+									td 5.4L/100km
+									td 6.98万元
+								tr
+									td 上汽通用 
+									td 雪佛兰
+									td 1.3L
+									td 2015
+									td 手动
+									td 国5
+									td 5.3L/100km
+									td 5.99万元
+								tr
+									td 东风悦达起亚 
+									td K2
+									td 1.4L
+									td 2015
+									td 手动
+									td 国4,国5
+									td 6.1L/100km
+									td 7.29万元
+								tr
+									td 广汽本田 
+									td 飞度
+									td 1.5L
+									td 2014
+									td CVT无级变速
+									td 国4,国5
+									td 5.3L/100km
+									td 8.18万元
+								tr
+									td 东风本田 
+									td 哥瑞
+									td 1.5L
+									td 2016
+									td CVT无级变速
+									td 国5
+									td 5.4L/100km
+									td 8.98万元
+								tr
+									td 广汽丰田 
+									td YARiS
+									td 1.5L
+									td 2015
+									td 自动
+									td 国4,国5
+									td 5.7L/100km
+									td 8.58万元
+								tr
+									td 长安轿车 
+									td CX20
+									td 1.4L
+									td 2014
+									td 手动
+									td 国4
+									td 5.6L/100km
+									td 5.59万元
+								tr
+									td 大众
+									td POLO
+									td 1.4L
+									td 2014
+									td 手动
+									td 国5
+									td 5.8L/100km
+									td 7.59万元
+								tr
+									td 北京现代
+									td 瑞纳
+									td 1.4L
+									td 2014
+									td 手动
+									td 国4,京5
+									td 6.1L/100km
+									td 7.39万元
+								tr
+									td 一汽丰田
+									td 威驰
+									td 1.3L
+									td 2014
+									td 手动
+									td 国4,国5
+									td 5.4L/100km
+									td 6.98万元
+								tr
+									td 上汽通用 
+									td 雪佛兰
+									td 1.3L
+									td 2015
+									td 手动
+									td 国5
+									td 5.3L/100km
+									td 5.99万元
+								tr
+									td 东风悦达起亚 
+									td K2
+									td 1.4L
+									td 2015
+									td 手动
+									td 国4,国5
+									td 6.1L/100km
+									td 7.29万元
+								tr
+									td 广汽本田 
+									td 飞度
+									td 1.5L
+									td 2014
+									td CVT无级变速
+									td 国4,国5
+									td 5.3L/100km
+									td 8.18万元
+								tr
+									td 东风本田 
+									td 哥瑞
+									td 1.5L
+									td 2016
+									td CVT无级变速
+									td 国5
+									td 5.4L/100km
+									td 8.98万元
+								tr
+									td 广汽丰田 
+									td YARiS
+									td 1.5L
+									td 2015
+									td 自动
+									td 国4,国5
+									td 5.7L/100km
+									td 8.58万元
+								tr
+									td 长安轿车 
+									td CX20
+									td 1.4L
+									td 2014
+									td 手动
+									td 国4
+									td 5.6L/100km
+									td 5.59万元
+								tr
+									td 大众
+									td POLO
+									td 1.4L
+									td 2014
+									td 手动
+									td 国5
+									td 5.8L/100km
+									td 7.59万元
+								tr
+									td 北京现代
+									td 瑞纳
+									td 1.4L
+									td 2014
+									td 手动
+									td 国4,京5
+									td 6.1L/100km
+									td 7.39万元
+								tr
+									td 一汽丰田
+									td 威驰
+									td 1.3L
+									td 2014
+									td 手动
+									td 国4,国5
+									td 5.4L/100km
+									td 6.98万元
+								tr
+									td 上汽通用 
+									td 雪佛兰
+									td 1.3L
+									td 2015
+									td 手动
+									td 国5
+									td 5.3L/100km
+									td 5.99万元
+								tr
+									td 东风悦达起亚 
+									td K2
+									td 1.4L
+									td 2015
+									td 手动
+									td 国4,国5
+									td 6.1L/100km
+									td 7.29万元
+								tr
+									td 广汽本田 
+									td 飞度
+									td 1.5L
+									td 2014
+									td CVT无级变速
+									td 国4,国5
+									td 5.3L/100km
+									td 8.18万元
+								tr
+									td 东风本田 
+									td 哥瑞
+									td 1.5L
+									td 2016
+									td CVT无级变速
+									td 国5
+									td 5.4L/100km
+									td 8.98万元
+								tr
+									td 广汽丰田 
+									td YARiS
+									td 1.5L
+									td 2015
+									td 自动
+									td 国4,国5
+									td 5.7L/100km
+									td 8.58万元
+								tr
+									td 长安轿车 
+									td CX20
+									td 1.4L
+									td 2014
+									td 手动
+									td 国4
+									td 5.6L/100km
+									td 5.59万元							
+				.box
+					.box-header
+						h3.box-title 数据表格(自动分页，表头排序，查找，指定显示行数)
+					.box-body
+						table.table.table-bordered.table-striped#example1
+							thead
+								tr
+									th 厂牌
+									th 车系
+									th 排量
+									th 年款
+									th 变速箱
+									th 环保标准
+									th 综合工况油耗
+									th 标准售价
+							tbody
+								tr
+									td 大众
+									td POLO
+									td 1.4L
+									td 2014
+									td 手动
+									td 国5
+									td 5.8L/100km
+									td 7.59万元
+								tr
+									td 北京现代
+									td 瑞纳
+									td 1.4L
+									td 2014
+									td 手动
+									td 国4,京5
+									td 6.1L/100km
+									td 7.39万元
+								tr
+									td 一汽丰田
+									td 威驰
+									td 1.3L
+									td 2014
+									td 手动
+									td 国4,国5
+									td 5.4L/100km
+									td 6.98万元
+								tr
+									td 上汽通用 
+									td 雪佛兰
+									td 1.3L
+									td 2015
+									td 手动
+									td 国5
+									td 5.3L/100km
+									td 5.99万元
+								tr
+									td 东风悦达起亚 
+									td K2
+									td 1.4L
+									td 2015
+									td 手动
+									td 国4,国5
+									td 6.1L/100km
+									td 7.29万元
+								tr
+									td 广汽本田 
+									td 飞度
+									td 1.5L
+									td 2014
+									td CVT无级变速
+									td 国4,国5
+									td 5.3L/100km
+									td 8.18万元
+								tr
+									td 东风本田 
+									td 哥瑞
+									td 1.5L
+									td 2016
+									td CVT无级变速
+									td 国5
+									td 5.4L/100km
+									td 8.98万元
+								tr
+									td 广汽丰田 
+									td YARiS
+									td 1.5L
+									td 2015
+									td 自动
+									td 国4,国5
+									td 5.7L/100km
+									td 8.58万元
+								tr
+									td 长安轿车 
+									td CX20
+									td 1.4L
+									td 2014
+									td 手动
+									td 国4
+									td 5.6L/100km
+									td 5.59万元
+								tr
+									td 大众
+									td POLO
+									td 1.4L
+									td 2014
+									td 手动
+									td 国5
+									td 5.8L/100km
+									td 7.59万元
+								tr
+									td 北京现代
+									td 瑞纳
+									td 1.4L
+									td 2014
+									td 手动
+									td 国4,京5
+									td 6.1L/100km
+									td 7.39万元
+								tr
+									td 一汽丰田
+									td 威驰
+									td 1.3L
+									td 2014
+									td 手动
+									td 国4,国5
+									td 5.4L/100km
+									td 6.98万元
+								tr
+									td 上汽通用 
+									td 雪佛兰
+									td 1.3L
+									td 2015
+									td 手动
+									td 国5
+									td 5.3L/100km
+									td 5.99万元
+								tr
+									td 东风悦达起亚 
+									td K2
+									td 1.4L
+									td 2015
+									td 手动
+									td 国4,国5
+									td 6.1L/100km
+									td 7.29万元
+								tr
+									td 广汽本田 
+									td 飞度
+									td 1.5L
+									td 2014
+									td CVT无级变速
+									td 国4,国5
+									td 5.3L/100km
+									td 8.18万元
+								tr
+									td 东风本田 
+									td 哥瑞
+									td 1.5L
+									td 2016
+									td CVT无级变速
+									td 国5
+									td 5.4L/100km
+									td 8.98万元
+								tr
+									td 广汽丰田 
+									td YARiS
+									td 1.5L
+									td 2015
+									td 自动
+									td 国4,国5
+									td 5.7L/100km
+									td 8.58万元
+								tr
+									td 长安轿车 
+									td CX20
+									td 1.4L
+									td 2014
+									td 手动
+									td 国4
+									td 5.6L/100km
+									td 5.59万元
+								tr
+									td 大众
+									td POLO
+									td 1.4L
+									td 2014
+									td 手动
+									td 国5
+									td 5.8L/100km
+									td 7.59万元
+								tr
+									td 北京现代
+									td 瑞纳
+									td 1.4L
+									td 2014
+									td 手动
+									td 国4,京5
+									td 6.1L/100km
+									td 7.39万元
+								tr
+									td 一汽丰田
+									td 威驰
+									td 1.3L
+									td 2014
+									td 手动
+									td 国4,国5
+									td 5.4L/100km
+									td 6.98万元
+								tr
+									td 上汽通用 
+									td 雪佛兰
+									td 1.3L
+									td 2015
+									td 手动
+									td 国5
+									td 5.3L/100km
+									td 5.99万元
+								tr
+									td 东风悦达起亚 
+									td K2
+									td 1.4L
+									td 2015
+									td 手动
+									td 国4,国5
+									td 6.1L/100km
+									td 7.29万元
+								tr
+									td 广汽本田 
+									td 飞度
+									td 1.5L
+									td 2014
+									td CVT无级变速
+									td 国4,国5
+									td 5.3L/100km
+									td 8.18万元
+								tr
+									td 东风本田 
+									td 哥瑞
+									td 1.5L
+									td 2016
+									td CVT无级变速
+									td 国5
+									td 5.4L/100km
+									td 8.98万元
+								tr
+									td 广汽丰田 
+									td YARiS
+									td 1.5L
+									td 2015
+									td 自动
+									td 国4,国5
+									td 5.7L/100km
+									td 8.58万元
+								tr
+									td 长安轿车 
+									td CX20
+									td 1.4L
+									td 2014
+									td 手动
+									td 国4
+									td 5.6L/100km
+									td 5.59万元
+								tr
+									td 大众
+									td POLO
+									td 1.4L
+									td 2014
+									td 手动
+									td 国5
+									td 5.8L/100km
+									td 7.59万元
+								tr
+									td 北京现代
+									td 瑞纳
+									td 1.4L
+									td 2014
+									td 手动
+									td 国4,京5
+									td 6.1L/100km
+									td 7.39万元
+								tr
+									td 一汽丰田
+									td 威驰
+									td 1.3L
+									td 2014
+									td 手动
+									td 国4,国5
+									td 5.4L/100km
+									td 6.98万元
+								tr
+									td 上汽通用 
+									td 雪佛兰
+									td 1.3L
+									td 2015
+									td 手动
+									td 国5
+									td 5.3L/100km
+									td 5.99万元
+								tr
+									td 东风悦达起亚 
+									td K2
+									td 1.4L
+									td 2015
+									td 手动
+									td 国4,国5
+									td 6.1L/100km
+									td 7.29万元
+								tr
+									td 广汽本田 
+									td 飞度
+									td 1.5L
+									td 2014
+									td CVT无级变速
+									td 国4,国5
+									td 5.3L/100km
+									td 8.18万元
+								tr
+									td 东风本田 
+									td 哥瑞
+									td 1.5L
+									td 2016
+									td CVT无级变速
+									td 国5
+									td 5.4L/100km
+									td 8.98万元
+								tr
+									td 广汽丰田 
+									td YARiS
+									td 1.5L
+									td 2015
+									td 自动
+									td 国4,国5
+									td 5.7L/100km
+									td 8.58万元
+								tr
+									td 长安轿车 
+									td CX20
+									td 1.4L
+									td 2014
+									td 手动
+									td 国4
+									td 5.6L/100km
+									td 5.59万元
+								tr
+									td 大众
+									td POLO
+									td 1.4L
+									td 2014
+									td 手动
+									td 国5
+									td 5.8L/100km
+									td 7.59万元
+								tr
+									td 北京现代
+									td 瑞纳
+									td 1.4L
+									td 2014
+									td 手动
+									td 国4,京5
+									td 6.1L/100km
+									td 7.39万元
+								tr
+									td 一汽丰田
+									td 威驰
+									td 1.3L
+									td 2014
+									td 手动
+									td 国4,国5
+									td 5.4L/100km
+									td 6.98万元
+								tr
+									td 上汽通用 
+									td 雪佛兰
+									td 1.3L
+									td 2015
+									td 手动
+									td 国5
+									td 5.3L/100km
+									td 5.99万元
+								tr
+									td 东风悦达起亚 
+									td K2
+									td 1.4L
+									td 2015
+									td 手动
+									td 国4,国5
+									td 6.1L/100km
+									td 7.29万元
+								tr
+									td 广汽本田 
+									td 飞度
+									td 1.5L
+									td 2014
+									td CVT无级变速
+									td 国4,国5
+									td 5.3L/100km
+									td 8.18万元
+								tr
+									td 东风本田 
+									td 哥瑞
+									td 1.5L
+									td 2016
+									td CVT无级变速
+									td 国5
+									td 5.4L/100km
+									td 8.98万元
+								tr
+									td 广汽丰田 
+									td YARiS
+									td 1.5L
+									td 2015
+									td 自动
+									td 国4,国5
+									td 5.7L/100km
+									td 8.58万元
+								tr
+									td 长安轿车 
+									td CX20
+									td 1.4L
+									td 2014
+									td 手动
+									td 国4
+									td 5.6L/100km
+									td 5.59万元							
+
+block pagesrc	
+	script(src="/bower_components/AdminLTE/plugins/datatables/jquery.dataTables.min.js")
+	script(src="/bower_components/AdminLTE/plugins/datatables/dataTables.bootstrap.min.js")
+	script(src="/bower_components/AdminLTE/plugins/fastclick/fastclick.js")
+	script(src="../js/datatable.js")
