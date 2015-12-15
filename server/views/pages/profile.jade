@@ -1,0 +1,224 @@
+extends ../layout
+
+block content
+	section.content-header
+		h1 用户中心
+		ol.breadcrumb
+			li
+				a(href="#")
+					i.fa.fa-dashboard  主页
+			li.active 上级
+			li.active 用户中心
+
+	section.content
+		.row
+			.col-md-3
+				.box.box-primary
+					.box-body.box-profile
+						img.profile-user-img.img-responsive.img-circle(src="/images/user4-128x128.jpg",alt="User profile picture")
+						h3.profile-username.text-center 妮娜.麦金太尔
+						p.text-muted.text-center 软件工程师			
+					ul.list-group.list-group-unbordered
+						li.list-group-item 追随者
+							span.pull-right.badge.bg-blue 1,322
+						li.list-group-item 关注
+							span.pull-right.badge.bg-aqua 543
+						li.list-group-item 好友 
+							span.pull-right.badge.bg-green 13,287
+					a.btn.btn-primary.btn-block(href="#") 关注
+				.box.box-primary
+					.box-header.with-border
+						h3.box-title 个人简介
+					.box-body
+						strong
+							i.fa.fa-book.margin-r-5 
+							span 学历
+						p.text-muted
+							|  B.S. in Computer Science from the University of Tennessee at Knoxville
+						hr
+						strong
+							i.fa.fa-map-marker.margin-r-5 
+							span 地址
+						p.text-muted
+							|  广州市天河区天河北路908号
+						hr
+						strong
+							i.fa.fa-pencil.margin-r-5 
+							span 特长
+						p
+							span.label.label-danger 平面设计
+							span.label.label-success 编写代码
+							span.label.label-info JavaScript
+							span.label.label-warning PHP
+							span.label.label-primary Node.js
+						hr
+						strong
+							i.fa.fa-file-text-o.margin-r-5 
+							span 笔记
+						p 
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum enim neque.
+			.col-md-9
+				.nav-tabs-custom
+					ul.nav.nav-tabs
+						li.active
+							a(data-toggle="tab" href="#activity" aria-expanded="true") 活跃
+						li: a(data-toggle="tab" href="#timeline" aria-expanded="false") 时间表
+						li: a(data-toggle="tab" href="#settings" aria-expanded="false") 设置
+					.tab-content
+						.active.tab-pane#activity
+							.post
+								.user-block
+									img.img-circle.imb-bordered-sm(src="/images/user1-128x128.jpg",alt="user image")
+									span.username
+										a(href="#") 乔纳森.伯克Jr
+										a.pull-right.btn-box-tool(href="#")
+											i.fa.fa-times
+									span.description 分享 - 今天下午7:30
+								p
+								| Lorem ipsum represents a long-held tradition for designers,typographers and the like. Some people hate it and argue for its demise, but others ignore the hate as they create awesome tools to help create filler text for everyone from bacon lovers to Charlie Sheen fans.
+								p
+
+								ul.list-inline
+									li: a.link-black.text-sm(href="#")
+										i.fa.fa-share.margin-r-5 分享
+									li: a.link-black.text-sm(href="#")
+										i.fa.fa-thumbs-o-up.margin-r-5 点赞
+									li.pull-right
+										a.link-black.text-sm(href="#")
+											i.fa.fa-comments-o.margin-r-5 评论(5)
+								input.form-control.imput-sm(type="text",placeholder="输入评论内容...")
+							.post.clearfix
+								.user-block
+									img.img-circle.img-bordered-sm(src="/images/user7-128x128.jpg",alt="User Image")
+									span.username
+										a(href="#") 罗斯.莎拉
+										a.pull-right.btn-box-tool(href="#")
+											i.fa.fa-times
+									span.description 最后给你短信 - 3天前
+								p
+								| Lorem ipsum represents a long-held tradition for designers,typographers and the like. Some people hate it and argue forits demise, but others ignore the hate as they create awesome tools to help create filler text for everyone from bacon lovers to Charlie Sheen fans.
+								p
+								form.form-horizontal
+									.form-group.margin-bottom-none
+										.col-sm-9
+											input.form-control.input-sm(placeholder="输入回复内容")
+										.col-sm-3
+											button.btn.btn-danger.pull-right.btn-block.btn-sm 发送
+							.post
+								.user-block
+									img.img-circle.img-bordered-sm(src="/images/user6-128x128.jpg",alt="User Image")
+									span.username
+										a(href="#") 琼斯.亚当
+										a.pull-right.btn-box-tool(href="#")
+											i.fa.fa-times
+									span.description 上传了5张照片 - 5天前
+								.row.margin-bottom
+									.col-sm-6
+										img.img-responsive(src="/images/photo1.png",alt="Photo")
+									.col-sm-6
+										.row
+											.col-sm-6
+												img.img-responsive(src="/images/photo2.png",alt="Photo")
+												br
+												img.img-responsive(src="/images/photo3.jpg",alt="Photo")
+											.col-sm-6
+												img.img-responsive(src="/images/photo4.jpg",alt="Photo")
+												br
+												img.img-responsive(src="/images/photo1.png",alt="Photo")
+								ul.list-inline
+									li: a.link-black.text-sm(href="#")
+										i.fa.fa-share.margin-r-5 分享
+									li: a.link-black.text-sm(href="#")
+										i.fa.fa-thumbs-o-up.margin-r-5 点赞
+									li.pull-right
+										a.link-black.text-sm(href="#")
+											i.fa.fa-comments-o.margin-r-5 评论(5)
+								input.form-control.imput-sm(type="text",placeholder="输入评论内容...")
+			
+						.tab-pane#timeline
+							ul.timeline.timeline-inverse
+								li.time-label
+									span.bg-red 2014-02-10
+								li
+									i.fa.fa-envelope.bg-blue
+									.timeline-item
+										span.time
+											i.fa.fa-clock-o 12:05
+										h3.timeline-header 
+											a(href="#") 支持团队
+											| 发送给你一封邮件
+										.timeline-body
+										| 	Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles,weebly ning heekya handango imeem plugg dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle quora plaxo ideeli hulu weebly balihoo...
+										.timeline-footer
+											a.btn.btn-primary.btn.xs 已读
+											a.btn.btn-danger.btn.xs 删除
+								li
+									i.fa.fa-user.bg-aqua
+									.timeline-item
+										span.time
+											i.fa.fa-clock-o 5分钟前
+										h3.timeline-header.no-border
+											a(href="#") 年青的莎拉
+											| 接受你的朋友请求
+								li
+									i.fa.fa-comments.bg-yellow
+									.timeline-item
+										span.time
+											i.fa.fa-clock-o 27分钟前
+										h3.timeline-header
+											a(href="#") 杰伊.怀特
+											| 评论你的文章
+										.timeline-body
+										| Take me to your leader!<br>Switzerland is small and neutral!<br>We are more like Germany, ambitious and misunderstood!
+										.timeline-footer
+											a.btn.btn-warning.btn-flat.btn-xs 查看评论
+								li.time-table
+									span.bg-green 2014-01-03
+								li
+									i.fa.fa-camera.bg-purple
+									.timeline-item
+										sapn.time
+											i.fa.fa-clock-o 2天前
+										h3.timeline-header
+											a(href="#") 米娜.李
+										| 上传新照片
+										.timeline-body
+											img.margin(src="http://placehold.it/150x100",alt="...")
+											img.margin(src="http://placehold.it/150x100",alt="...")
+											img.margin(src="http://placehold.it/150x100",alt="...")
+											img.margin(src="http://placehold.it/150x100",alt="...")
+								li
+									i.fa.fa-clock-o.bg-gray
+						.tab-pane#settings
+							form.form-horizontal
+								.form-group
+									label.col-sm-2.control-label(for="inputName") 姓名
+									.col-sm-10
+										input.form-control#inputName(type="text",placeholder="请输入姓名")
+								.form-group
+									label.col-sm-2.control-label(for="inputEmail") 邮箱
+									.col-sm-10
+										input.form-control#inputEmail(type="email",placeholder="请输入邮箱")
+								.form-group
+									label.col-sm-2.control-label(for="inputAddress") 地址
+									.col-sm-10
+										input.form-control#inputAddress(type="text",placeholder="请输入地址")
+								.form-group
+									label.col-sm-2.control-label(for="inputExperience") 经验
+									.col-sm-10
+										textarea.form-control#inputExperience(placeholder="请输入经验")
+								.form-group
+									label.col-sm-2.control-label(for="inputSkills") 技能
+									.col-sm-10
+										input.form-control#inputSkills(type="text",placeholder="请输入技能")
+								.form-group
+									.col-sm-offset-2.col-sm-10
+										.checkbox
+											label
+												input(type="checkbox")
+												|  我同意这些
+												a(href="#") 条款与条件
+								.form-group
+									.col-sm-offset-2.col-sm-10
+										button.btn.btn-danger(type="submit") 提交
+
