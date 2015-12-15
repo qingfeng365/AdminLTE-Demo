@@ -1,0 +1,261 @@
+extends ../layout
+
+block content
+	section.content-header
+		h1=title
+			small welcome to #{title}
+		ol.breadcrumb
+			li
+				a(href="/index-zfh")
+					i.fa.fa-dashboard
+					|首页&nbsp;
+			li.active 简单表格
+
+	section.content
+		.row
+			.col-md-6
+				.box
+					.box-header.with-border
+						h3.box-title 带边框表格
+					.box-body
+						table.table.table-bordered
+							tr
+								th(style="width:10px") #
+								th 任务
+								th 进度
+								th(style="width:40px") 标签
+							tr
+								td 1.
+								td 软件更新
+								td
+									.progress.progress-xs
+										.progress-bar.progress-bar-danger(style="width:55%")
+								td
+									span.badge.bg-red 55%
+							tr
+								td 2.
+								td 清理数据库
+								td
+									.progress.progress-xs
+										.progress-bar.progress-bar-yellow(style="width:70%")
+								td
+									span.badge.bg-yellow 70%
+
+
+							tr
+								td 3.
+								td 执行作业
+								td
+									.progress.progress-xs.progress-striped.active
+										.progress-bar.progress-bar-primary(style="width:30%")
+								td
+									span.badge.bg-light-blue 30%
+							tr
+								td 4.
+								td 修复Bug
+								td
+									.progress.progress-xs.progress-striped.active
+										.progress-bar.progress-bar-success(style="width:90%")
+								td
+									span.badge.bg-green 90%
+					.box-footer.clearfix
+						ul.pagination.pagination-sm.no-margin.pull-right
+							li
+								a(href="#") &laquo;
+							li
+								a(href="#") 1
+							li
+								a(href="#") 2
+							li
+								a(href="#") 3
+							li
+								a(href="#") &raquo;
+
+				.box
+					.box-header.with-border
+						h3.box-title 简明全宽表格
+					.box-body.no-padding
+						table.table.table-condensed
+							tr
+								th(style="width:10px") #
+								th 任务
+								th 进度
+								th(style="width:40px") 标签
+							tr
+								td 1.
+								td 软件更新
+								td
+									.progress.progress-xs
+										.progress-bar.progress-bar-danger(style="width:55%")
+								td
+									span.badge.bg-red 55%
+							tr
+								td 2.
+								td 清理数据库
+								td
+									.progress.progress-xs
+										.progress-bar.progress-bar-yellow(style="width:70%")
+								td
+									span.badge.bg-yellow 70%
+							tr
+								td 3.
+								td 执行作业
+								td
+									.progress.progress-xs.progress-striped.active
+										.progress-bar.progress-bar-primary(style="width:30%")
+								td
+									span.badge.bg-light-blue 30%
+							tr
+								td 4.
+								td 修复Bug
+								td
+									.progress.progress-xs.progress-striped.active
+										.progress-bar.progress-bar-success(style="width:90%")
+								td
+									span.badge.bg-green 90%
+
+			.col-md-6
+				.box
+					.box-header.with-border
+						h3.box-title 常规全宽表格
+						.box-tools
+							ul.pagination.pagination-sm.no-margin.pull-right
+								li
+									a(href="#") &laquo;
+								li
+									a(href="#") 1
+								li
+									a(href="#") 2
+								li
+									a(href="#") 3
+								li
+									a(href="#") &raquo;
+					.box-body.no-padding
+						table.table
+							tr
+								th(style="width:10px") #
+								th 任务
+								th 进度
+								th(style="width:40px") 标签
+							tr
+								td 1.
+								td 软件更新
+								td
+									.progress.progress-xs
+										.progress-bar.progress-bar-danger(style="width:55%")
+								td
+									span.badge.bg-red 55%
+							tr
+								td 2.
+								td 清理数据库
+								td
+									.progress.progress-xs
+										.progress-bar.progress-bar-yellow(style="width:70%")
+								td
+									span.badge.bg-yellow 70%
+							tr
+								td 3.
+								td 执行作业
+								td
+									.progress.progress-xs.progress-striped.active
+										.progress-bar.progress-bar-primary(style="width:30%")
+								td
+									span.badge.bg-light-blue 30%
+							tr
+								td 4.
+								td 修复Bug
+								td
+									.progress.progress-xs.progress-striped.active
+										.progress-bar.progress-bar-success(style="width:90%")
+								td
+									span.badge.bg-green 90%
+				.box
+					.box-header.with-border
+						h3.box-title 斑纹全宽表格
+					.box-body.no-padding
+						table.table.table-striped
+							tr
+								th(style="width:10px") #
+								th 任务
+								th 进度
+								th(style="width:40px") 标签
+							tr
+								td 1.
+								td 软件更新
+								td
+									.progress.progress-xs
+										.progress-bar.progress-bar-danger(style="width:55%")
+								td
+									span.badge.bg-red 55%
+							tr
+								td 2.
+								td 清理数据库
+								td
+									.progress.progress-xs
+										.progress-bar.progress-bar-yellow(style="width:70%")
+								td
+									span.badge.bg-yellow 70%
+							tr
+								td 3.
+								td 执行作业
+								td
+									.progress.progress-xs.progress-striped.active
+										.progress-bar.progress-bar-primary(style="width:30%")
+								td
+									span.badge.bg-light-blue 30%
+							tr
+								td 4.
+								td 修复Bug
+								td
+									.progress.progress-xs.progress-striped.active
+										.progress-bar.progress-bar-success(style="width:90%")
+								td
+									span.badge.bg-green 90%
+		
+		.row
+			.col-xs-12
+				.box
+					.box-header.with-border
+						h3.box-title 响应悬停效果
+						.box-tools
+							.input-group.input-group-sm(style="width:150px;")
+								input.form-control.pull-right(type="text",name="table_search",placeholder="搜索")
+								.input-group-btn
+									button.btn.btn-default(type="submit")
+										i.fa.fa-search
+					.box-body.table-responsive.no-padding
+						table.table.table-hover
+							tr
+								th ID
+								th 姓名
+								th 日期
+								th 状态
+								th 原因
+							tr
+								td 183
+								td 夏琪
+								td 11-7-2014
+								td
+									span.label.label-success 批准
+								td 从前有座山，山里有座庙，庙里有个老和尚……
+							tr
+								td 175
+								td 麦克格雷迪
+								td 12-3-2014
+								td
+									span.label.label-danger 不批准
+								td 14日，乐视超级电视入股TCL多媒体，双方将在战略资源和商业模式方面形成多维深度战略合作
+							tr
+								td 219
+								td 沈腾
+								td 1-23-2015
+								td
+									span.label.label-warning 待定
+								td 夏洛特烦恼已提交广电总局审核，能否如期上映？待定中
+							tr
+								td 637
+								td 王宝强
+								td 3-15-2015
+								td
+									span.label.label-primary 批准
+								td 在小米科技将旗下核心业务分为自有产品与生态链产品的次日，小米生态链一款空气净化器产品就曝出了疑涉硬件和APP数据“造假门”

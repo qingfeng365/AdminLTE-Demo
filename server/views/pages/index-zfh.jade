@@ -1,0 +1,568 @@
+extends ../layout
+
+block content
+	section.content-header
+		h1=title
+			small welcome to #{title}
+		ol.breadcrumb
+			li
+				a(href="#")
+					i.fa.fa-dashboard
+					|上级&nbsp;
+			li.active 当前
+
+	section.content
+		h3 info-box(信息盒)
+		.row
+			.col-md-3.col-sm-6.col-xs-12
+				.info-box
+					span.info-box-icon.bg-aqua
+						i.fa.fa-envelope-o
+					.info-box-content
+						span.info-box-text 消息
+						span.info-box-number 1,410					
+			.col-md-3.col-sm-6.col-xs-12
+				.info-box
+					span.info-box-icon.bg-green
+						i.fa.fa-flag-o
+					.info-box-content
+						span.info-box-text 标记
+						span.info-box-number 410	
+			.col-md-3.col-sm-6.col-xs-12
+				.info-box
+					span.info-box-icon.bg-yellow
+						i.fa.fa-files-o
+					.info-box-content
+						span.info-box-text 上传
+						span.info-box-number 13,648			
+			.col-md-3.col-sm-6.col-xs-12
+				.info-box
+					span.info-box-icon.bg-red
+						i.fa.fa-star-o
+					.info-box-content
+						span.info-box-text 关注
+						span.info-box-number 93,139
+		.row
+			.col-md-3.col-sm-6.col-xs-12
+				.info-box.bg-aqua
+					span.info-box-icon
+						i.fa.fa-bookmark-o
+					.info-box-content
+						span.info-box-text 收藏
+						span.info-box-number 41,410
+						.progress
+							.progress-bar(style="width: 70%")
+						div
+							span.progress-description 30天内增长70%
+			.col-md-3.col-sm-6.col-xs-12
+				.info-box.bg-green
+					span.info-box-icon
+						i.fa.fa-thumbs-o-up
+					.info-box-content
+						span.info-box-text 点赞
+						span.info-box-number 41,410
+						.progress
+							.progress-bar(style="width: 70%")
+						div
+							span.progress-description 30天内增长70%
+			.col-md-3.col-sm-6.col-xs-12
+				.info-box.bg-yellow
+					span.info-box-icon
+						i.fa.fa-calendar
+					.info-box-content
+						span.info-box-text 事件
+						span.info-box-number 41,410
+						.progress
+							.progress-bar(style="width: 70%")
+						div
+							span.progress-description 30天内增长70%
+			.col-md-3.col-sm-6.col-xs-12
+				.info-box.bg-red
+					span.info-box-icon
+						i.fa.fa-comments-o
+					.info-box-content
+						span.info-box-text 评论
+						span.info-box-number 41,410
+						.progress
+							.progress-bar(style="width: 70%")
+						div
+							span.progress-description 30天内增长70%
+		h3 small-box(状态盒)
+		.row
+			.col-lg-3.col-xs-6
+				.small-box.bg-aqua
+					.inner
+						h3 150
+						p 新订单
+					.icon
+						i.fa.fa-shopping-cart
+					a.small-box-footer(href="#") 更多信息
+						i.fa.fa-arrow-circle-right
+			.col-lg-3.col-xs-6
+				.small-box.bg-green
+					.inner
+						h3 53
+							sup(style="font-size:20px;") %
+						p 增长率
+					.icon
+						i.ion.ion-stats-bars
+					a.small-box-footer(href="#") 更多信息
+						i.fa.fa-arrow-circle-right
+			.col-lg-3.col-xs-6
+				.small-box.bg-yellow
+					.inner
+						h3 44
+						p 注册用户
+					.icon
+						i.ion.ion-person-add
+					a.small-box-footer(href="#") 更多信息
+						i.fa.fa-arrow-circle-right
+			.col-lg-3.col-xs-6
+				.small-box.bg-red
+					.inner
+						h3 65
+						p 访客数量
+					.icon
+						i.ion.ion-pie-graph
+					a.small-box-footer(href="#") 更多信息
+						i.fa.fa-arrow-circle-right
+
+		h2.page-header 社交类部件
+		.row
+			.col-md-4
+				.box.box-widget.widget-user-2
+					.widget-user-header.bg-yellow
+						.widget-user-image
+							img.img-circle(src="/images/user7-128x128.jpg", alt="用户头像")
+							h3.widget-user-username 王思聪
+							h5.widget-user-desc 微博达人
+					.box-footer.no-padding
+						.ul.nav.nav-stacked
+							li
+								a(href="#") 项目
+									span.pull-right.badge.bg-blue 31
+							li
+								a(href="#") 任务
+									span.pull-right.badge.bg-aqua 5
+							li
+								a(href="#") 已完成
+									span.pull-right.badge.bg-green 25
+							li
+								a(href="#") 跟进
+									span.pull-right.badge.bg-red 1,213					
+			.col-md-4
+				.box.box-widget.widget-user
+					.widget-user-header.bg-aqua-active
+						h3.widget-user-username 亚历山大
+						h5.widget-user-desc 执行董事
+					.widget-user-image
+						img.img-circle(src="/images/user1-128x128.jpg", alt="用户头像")
+					.box-footer
+						.row
+							.col-sm-4.border-right
+								.description-block
+									h5.description-header 3,200
+									span.description-text 销售
+							.col-sm-4.border-right
+								.description-block
+									h5.description-header 13,000
+									span.description-text 跟进
+							.col-sm-4.border-right
+								.description-block
+									h5.description-header 35
+									span.description-text 产品
+			.col-md-4
+				.box.box-widget.widget-user
+					.widget-user-header.bg-black(style="background:url('/images/photo1.png') center center;")
+						h3.widget-user-username 伊丽莎白
+						h5.widget-user-desc 网页设计
+					.widget-user-image
+						img.img-circle(src="/images/user3-128x128.jpg", alt="用户头像")
+					.box-footer
+						.row
+							.col-sm-4.border-right
+								.description-block
+									h5.description-header 3,200
+									span.description-text 销售
+							.col-sm-4.border-right
+								.description-block
+									h5.description-header 13,000
+									span.description-text 跟进
+							.col-sm-4.border-right
+								.description-block
+									h5.description-header 35
+									span.description-text 产品									
+
+		h2.page-header 评论部件
+		.row
+			.col-md-6
+				.box.box-widget
+					.box-header.with-border
+						.user-block
+							img.img-circle(src="/images/user1-128x128.jpg", alt="用户头像")
+							span.username
+								a(href="#") 小乔纳森
+							span.description 公开分享-19:30
+						.box-tools
+							button.btn.btn-box-tool(type="button",data-toggle="tooltip",title="标记为已读")
+								i.fa.fa-circle-o
+							button.btn.btn-box-tool(type="button",data-widget="collapse")
+								i.fa.fa-minus
+							button.btn.btn-box-tool(type="button",data-widget="remove")
+								i.fa.fa-times
+					.box-body
+						img.img-responsive.pad(src="/images/photo2.png", alt="照片")
+						p 我早上照的这张照片，你们觉得怎样？
+						button.btn.btn-default.btn-xs(type="button")
+							i.fa.fa-share
+							|分享
+						button.btn.btn-default.btn-xs(type="button")
+							i.fa.fa-thumbs-o-up
+							|赞
+						span.pull-right.text-muted 127个赞 - 3条评论
+					.box-footer.box-comments
+						.box-comment
+							img.img-circle.img-sm(src="/images/user3-128x128.jpg", alt="用户头像")
+							.comment-text
+								span.username 伊丽莎白
+								span.text-muted.pull-right 20:12
+								| 这张照片不错哦！我可以分享吗？
+						.box-comment
+							img.img-circle.img-sm(src="/images/user4-128x128.jpg", alt="用户头像")
+							.comment-text
+								span.username 斯塔克
+								span.text-muted.pull-right 20:03
+								| 这张照片不错哦！我可以分享吗？
+					.box-footer
+						.form(action="#" mothod="post")
+							img.img-responsive.img-circle.img-sm(src="/images/user5-128x128.jpg", alt="用户头像")
+							.img-push
+								input.form-control.input-sm(type="text",placeholder="请输入评论内容")
+
+			.col-md-6
+				.box.box-widget
+					.box-header.with-border
+						.user-block
+							img.img-circle(src="/images/user1-128x128.jpg", alt="用户头像")
+							span.username
+								a(href="#") 小乔纳森
+							span.description 公开分享-19:30
+						.box-tools
+							button.btn.btn-box-tool(type="button",data-toggle="tooltip",title="标记为已读")
+								i.fa.fa-circle-o
+							button.btn.btn-box-tool(type="button",data-widget="collapse")
+								i.fa.fa-minus
+							button.btn.btn-box-tool(type="button",data-widget="remove")
+								i.fa.fa-times
+					.box-body
+						p 从前有座山，山里有座庙，庙里有几个和尚，一个和尚挑水喝，两个和尚抬水喝，三个和尚没水喝
+						p 红发会，五个桔核，柯南道尔
+						
+						.attachment-block.clearfix
+							img.attachment-img(src="/images/photo1.png", alt="附件图片")
+							.attachment-pushed
+								h4.attachment-heading
+									a(href="#") 一篇好文章
+								.attachment-text
+									|附件的文字描述应该写在这儿,附件的文字描述应该写在这儿，附件的文字描述应该写在这儿......
+									a(href="#") 更多
+
+						button.btn.btn-default.btn-xs(type="button")
+							i.fa.fa-share
+							|分享
+						button.btn.btn-default.btn-xs(type="button")
+							i.fa.fa-thumbs-o-up
+							|赞
+						span.pull-right.text-muted 45个赞 - 2条评论
+					.box-footer.box-comments
+						.box-comment
+							img.img-circle.img-sm(src="/images/user3-128x128.jpg", alt="用户头像")
+							.comment-text
+								span.username 伊丽莎白
+								span.text-muted.pull-right 20:12
+								| 这张照片不错哦！我可以分享吗？
+								.box-footer.box-comments
+									.box-comment
+										img.img-circle.img-sm(src="/images/user4-128x128.jpg", alt="用户头像")
+										.comment-text
+											span.username 斯塔克
+											span.text-muted.pull-right 20:03
+											| 这张照片不错哦！我可以分享吗？
+						.box-comment
+							img.img-circle.img-sm(src="/images/user4-128x128.jpg", alt="用户头像")
+							.comment-text
+								span.username 斯塔克
+								span.text-muted.pull-right 20:03
+								| 这张照片不错哦！我可以分享吗？
+					.box-footer
+						.form(action="#" mothod="post")
+							img.img-responsive.img-circle.img-sm(src="/images/user5-128x128.jpg", alt="用户头像")
+							.img-push
+								input.form-control.input-sm(type="text",placeholder="请输入评论内容")
+
+		h3 box-tools
+		.row
+			.col-md-3
+				.box.collapsed-box
+					.box-header.with-border
+						h3.box-title 默认收缩
+						.box-tools.pull-right
+							button.btn.btn-box-tool(type="button",data-widget="collapse")
+								i.fa.fa-plus							
+					.box-body
+						|面板内容
+					.box-footer
+						|面板底部
+			.col-md-3
+				.box.box-success
+					.box-header.with-border
+						h3.box-title 可移除
+						.box-tools.pull-right							
+							button.btn.btn-box-tool(type="button",data-widget="remove")
+								i.fa.fa-times
+					.box-body
+						|面板内容
+					.box-footer
+						|面板底部
+			.col-md-3
+				.box.box-warning
+					.box-header.with-border
+						h3.box-title 可收缩
+						.box-tools.pull-right							
+							button.btn.btn-box-tool(type="button",data-widget="collapse")
+								i.fa.fa-minus
+					.box-body
+						|面板内容
+					.box-footer
+						|面板底部
+			.col-md-3
+				.box.box-danger
+					.box-header.with-border
+						h3.box-title 加载中
+						.box-tools.pull-right							
+							button.btn.btn-box-tool(type="button",data-widget="collapse")
+								i.fa.fa-minus
+					.box-body
+						|面板内容
+					.box-footer
+						|面板底部
+					.overlay
+						i.fa.fa-refresh.fa-spin
+
+		.row
+			.col-md-3
+				.box.collapsed-box.box-default.box-solid
+					.box-header.with-border
+						h3.box-title 默认收缩
+						.box-tools.pull-right
+							button.btn.btn-box-tool(type="button",data-widget="collapse")
+								i.fa.fa-plus							
+					.box-body
+						|面板内容
+					.box-footer
+						|面板底部
+			.col-md-3
+				.box.box-success.box-solid
+					.box-header.with-border
+						h3.box-title 可移除
+						.box-tools.pull-right							
+							button.btn.btn-box-tool(type="button",data-widget="remove")
+								i.fa.fa-times
+					.box-body
+						|面板内容
+					.box-footer
+						|面板底部
+			.col-md-3
+				.box.box-warning.box-solid
+					.box-header.with-border
+						h3.box-title 可收缩
+						.box-tools.pull-right							
+							button.btn.btn-box-tool(type="button",data-widget="collapse")
+								i.fa.fa-minus
+					.box-body
+						|面板内容
+					.box-footer
+						|面板底部
+			.col-md-3
+				.box.box-danger.box-solid
+					.box-header.with-border
+						h3.box-title 加载中
+						.box-tools.pull-right							
+							button.btn.btn-box-tool(type="button",data-widget="collapse")
+								i.fa.fa-minus
+					.box-body
+						|面板内容
+					.box-footer
+						|面板底部
+					.overlay
+						i.fa.fa-refresh.fa-spin
+
+		h2.page-header 对话框
+		.row
+			.col-md-3
+				.box.box-primary.direct-chat.direct-chat-primary
+					.box-header.with-border
+						h3.box-title 对话
+						.box-tools.pull-right
+							span.badge.bg-light-blue(data-toggle="tooltip",title="3条信息") 3
+							button.btn.btn-box-tool(type="button",data-widget="collapse")
+								i.fa.fa-minus
+							button.btn.btn-box-tool(type="button",data-widget="chat-pane-toggle",data-toggle="tooltip",title="联系人")
+								i.fa.fa-comments
+							button.btn.btn-box-tool(type="button",data-widget="remove")
+								i.fa.fa-times
+					.box-body
+						.direct-chat-messages
+							.direct-chat-msg
+								.direct-chat-info.clearfix
+									span.direct-chat-name.pull-left 亚历山大
+									span.direct-chat-timestamp.pull-right 1月23日 14:06
+								img.direct-chat-img(src="/images/user1-128x128.jpg", alt="用户头像")
+								.direct-chat-text 这个模板真的是免费的吗？不可置信！
+							.direct-chat-msg.right
+								.direct-chat-info.clearfix
+									span.direct-chat-name.pull-right 莎拉布洛克
+									span.direct-chat-timestamp.pull-left 1月23日 14:08
+								img.direct-chat-img(src="/images/user3-128x128.jpg", alt="用户头像")
+								.direct-chat-text 当然是真的，你不得不信！
+						.direct-chat-contacts
+							ul.contacts-list
+								li
+									a(href="#")
+										img.contacts-list-img(src="/images/user1-128x128.jpg", alt="联系人头像")
+										.contacts-list-info
+											span.contacts-list-name 德古拉
+											small.contacts-list-date.pull-right 2/28/2015
+											span.contacts-list-msg 今天天气不错！哈哈……
+					.box-footer
+						form(action="#",method="post")
+							.input-group
+								input.form-control(type="text",name="message",placeholder="请输入消息")
+								span.input-group-btn
+									button.btn.btn-primary.btn-flat(type="submit") 发送
+
+			.col-md-3
+				.box.box-success.direct-chat.direct-chat-success
+					.box-header.with-border
+						h3.box-title 对话
+						.box-tools.pull-right
+							span.badge.bg-light-blue(data-toggle="tooltip",title="3条信息") 3
+							button.btn.btn-box-tool(type="button",data-widget="collapse")
+								i.fa.fa-minus
+							button.btn.btn-box-tool(type="button",data-widget="chat-pane-toggle",data-toggle="tooltip",title="联系人")
+								i.fa.fa-comments
+							button.btn.btn-box-tool(type="button",data-widget="remove")
+								i.fa.fa-times
+					.box-body
+						.direct-chat-messages
+							.direct-chat-msg
+								.direct-chat-info.clearfix
+									span.direct-chat-name.pull-left 亚历山大
+									span.direct-chat-timestamp.pull-right 1月23日 14:06
+								img.direct-chat-img(src="/images/user1-128x128.jpg", alt="用户头像")
+								.direct-chat-text 这个模板真的是免费的吗？不可置信！
+							.direct-chat-msg.right
+								.direct-chat-info.clearfix
+									span.direct-chat-name.pull-right 莎拉布洛克
+									span.direct-chat-timestamp.pull-left 1月23日 14:08
+								img.direct-chat-img(src="/images/user3-128x128.jpg", alt="用户头像")
+								.direct-chat-text 当然是真的，你不得不信！
+						.direct-chat-contacts
+							ul.contacts-list
+								li
+									a(href="#")
+										img.contacts-list-img(src="/images/user1-128x128.jpg", alt="联系人头像")
+										.contacts-list-info
+											span.contacts-list-name 德古拉
+											small.contacts-list-date.pull-right 2/28/2015
+											span.contacts-list-msg 今天天气不错！哈哈……
+					.box-footer
+						form(action="#",method="post")
+							.input-group
+								input.form-control(type="text",name="message",placeholder="请输入消息")
+								span.input-group-btn
+									button.btn.btn-success.btn-flat(type="submit") 发送
+
+			.col-md-3
+				.box.box-warning.direct-chat.direct-chat-warning
+					.box-header.with-border
+						h3.box-title 对话
+						.box-tools.pull-right
+							span.badge.bg-light-blue(data-toggle="tooltip",title="3条信息") 3
+							button.btn.btn-box-tool(type="button",data-widget="collapse")
+								i.fa.fa-minus
+							button.btn.btn-box-tool(type="button",data-widget="chat-pane-toggle",data-toggle="tooltip",title="联系人")
+								i.fa.fa-comments
+							button.btn.btn-box-tool(type="button",data-widget="remove")
+								i.fa.fa-times
+					.box-body
+						.direct-chat-messages
+							.direct-chat-msg
+								.direct-chat-info.clearfix
+									span.direct-chat-name.pull-left 亚历山大
+									span.direct-chat-timestamp.pull-right 1月23日 14:06
+								img.direct-chat-img(src="/images/user1-128x128.jpg", alt="用户头像")
+								.direct-chat-text 这个模板真的是免费的吗？不可置信！
+							.direct-chat-msg.right
+								.direct-chat-info.clearfix
+									span.direct-chat-name.pull-right 莎拉布洛克
+									span.direct-chat-timestamp.pull-left 1月23日 14:08
+								img.direct-chat-img(src="/images/user3-128x128.jpg", alt="用户头像")
+								.direct-chat-text 当然是真的，你不得不信！
+						.direct-chat-contacts
+							ul.contacts-list
+								li
+									a(href="#")
+										img.contacts-list-img(src="/images/user1-128x128.jpg", alt="联系人头像")
+										.contacts-list-info
+											span.contacts-list-name 德古拉
+											small.contacts-list-date.pull-right 2/28/2015
+											span.contacts-list-msg 今天天气不错！哈哈……
+					.box-footer
+						form(action="#",method="post")
+							.input-group
+								input.form-control(type="text",name="message",placeholder="请输入消息")
+								span.input-group-btn
+									button.btn.btn-warning.btn-flat(type="submit") 发送
+			
+			.col-md-3
+				.box.box-danger.direct-chat.direct-chat-danger
+					.box-header.with-border
+						h3.box-title 对话
+						.box-tools.pull-right
+							span.badge.bg-light-blue(data-toggle="tooltip",title="3条信息") 3
+							button.btn.btn-box-tool(type="button",data-widget="collapse")
+								i.fa.fa-minus
+							button.btn.btn-box-tool(type="button",data-widget="chat-pane-toggle",data-toggle="tooltip",title="联系人")
+								i.fa.fa-comments
+							button.btn.btn-box-tool(type="button",data-widget="remove")
+								i.fa.fa-times
+					.box-body
+						.direct-chat-messages
+							.direct-chat-msg
+								.direct-chat-info.clearfix
+									span.direct-chat-name.pull-left 亚历山大
+									span.direct-chat-timestamp.pull-right 1月23日 14:06
+								img.direct-chat-img(src="/images/user1-128x128.jpg", alt="用户头像")
+								.direct-chat-text 这个模板真的是免费的吗？不可置信！
+							.direct-chat-msg.right
+								.direct-chat-info.clearfix
+									span.direct-chat-name.pull-right 莎拉布洛克
+									span.direct-chat-timestamp.pull-left 1月23日 14:08
+								img.direct-chat-img(src="/images/user3-128x128.jpg", alt="用户头像")
+								.direct-chat-text 当然是真的，你不得不信！
+						.direct-chat-contacts
+							ul.contacts-list
+								li
+									a(href="#")
+										img.contacts-list-img(src="/images/user1-128x128.jpg", alt="联系人头像")
+										.contacts-list-info
+											span.contacts-list-name 德古拉
+											small.contacts-list-date.pull-right 2/28/2015
+											span.contacts-list-msg 今天天气不错！哈哈……
+					.box-footer
+						form(action="#",method="post")
+							.input-group
+								input.form-control(type="text",name="message",placeholder="请输入消息")
+								span.input-group-btn
+									button.btn.btn-danger.btn-flat(type="submit") 发送

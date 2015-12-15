@@ -1,0 +1,271 @@
+extends ../layout
+
+block content
+	section.content-header
+		h1=title
+			small welcome to #{title}
+		ol.breadcrumb
+			li
+				a(href="/index-zfh")
+					i.fa.fa-dashboard
+					|首页&nbsp;
+			li.active 简单表单
+
+	section.content
+		.row
+			.col-md-6
+				.box.box-primary
+					.box-header.with-border
+						h3.box-title 简单示例
+					form(role="form")
+						.box-body
+							.form-group
+								label(for="inputEmail1") 邮箱地址
+								input.form-control(type="email",id="inputEmail1",placeholder="请输入邮箱")
+							.form-group
+								label(for="inputPassword1") 密码
+								input.form-control(type="password",id="inputPassword1",placeholder="请输入密码")
+							.form-group
+								label(for="inputFile1") 文件上传
+								input(type="file",id="inputFile1")
+								p.help-block 帮助文本写在这里。
+							.checkbox
+								label
+									input(type="checkbox")
+									|检查框
+						.box-footer
+							button.btn.btn-primary(type="submit") 提交
+
+
+				.box.box-success
+					.box-header.with-border
+						h3.box-title 不同高度
+					.box-body
+						input.form-control.input-lg(type="text",placeholder="大文本框")
+						br
+						input.form-control(type="text",placeholder="默认文本框")
+						br
+						input.form-control.input-sm(type="text",placeholder="小文本框")
+						
+				.box.box-danger
+					.box-header.with-border
+						h3.box-title 不同宽度
+					.box-body
+						.row
+							.col-xs-3
+								input.form-control(type="text",placeholder="宽度3")
+							.col-xs-4
+								input.form-control(type="text",placeholder="宽度4")
+							.col-xs-5
+								input.form-control(type="text",placeholder="宽度5")
+
+				.box.box-info
+					.box-header.with-border
+						h3.box-title 加装
+					.box-body
+						.input-group
+							span.input-group-addon @
+							input.form-control(type="text",placeholder="用户名")
+						br
+						.input-group
+							span.input-group-addon $
+							input.form-control(type="text",placeholder="金额,货币")
+							span.input-group-addon .00
+						h4 带图标
+						.input-group
+							span.input-group-addon 
+								i.fa.fa-envelope
+							input.form-control(type="email",placeholder="邮箱地址")
+						br
+						.input-group							
+							input.form-control(type="text",placeholder="")
+							span.input-group-addon 
+								i.fa.fa-check
+						br
+						.input-group
+							span.input-group-addon
+								i.fa.fa-dollar
+							input.form-control(type="text",placeholder="")
+							span.input-group-addon
+								i.fa.fa-ambulance
+
+						h4 带检查框和复选框
+						.row
+							.col-lg-6
+								.input-group
+									span.input-group-addon
+										input(type="checkbox")
+									input.form-control(type="text")
+							.col-lg-6
+								.input-group
+									span.input-group-addon
+										input(type="radio")
+									input.form-control(type="text")
+
+						h4 带按钮
+						p.margin
+							|大号：
+							code .input-group.input-group-lg
+
+						.input-group.input-group-lg
+							.input-group-btn
+								button.btn.btn-warning.dropdown-toggle(type="button",data-toggle="dropdown") 选项1
+									span.fa.fa-caret-down
+								ul.dropdown-menu
+									li
+										a(href="#") 选项1
+									li
+										a(href="#") 选项2
+									li
+										a(href="#") 选项3
+									li.divider
+									li
+										a(href="#") 分隔符
+							input.form-control(type="text")
+
+						p.margin
+							|正常						
+
+						.input-group
+							.input-group-btn
+								button.btn.btn-danger(type="button") 行动								
+							input.form-control(type="text")
+
+						p.margin
+							|小号：							
+							code .input-group.input-group-sm
+
+						.input-group.input-group-sm
+							input.form-control(type="text")
+							span.input-group-btn
+								button.btn.btn-info.btn-flat Go!
+
+			//-右侧
+			.col-md-6
+				.box.box-info
+					.box-header.with-border
+						h3.box-title 纵向表单
+					form.form-horizontal
+						.box-body
+							.form-group
+								label.col-sm-2.control-label(for="inputEmail3") 邮箱地址
+								.col-sm-10
+									input.form-control(type="email",id="inputEmail3",placeholder="邮箱地址")
+							.form-group
+								label.col-sm-2.control-label(for="inputPassword3") 密码
+								.col-sm-10
+									input.form-control(type="password",id="inputPassword3",placeholder="密码")
+							.form-group
+								.col-sm-offset-2.col-sm-10
+									.checkbox
+										label
+											input(type="checkbox")
+											|记住我
+
+						.box-footer
+							button.btn.btn-default(type="submit") 取消
+							button.btn.btn-info.pull-right(type="submit") 登录
+
+				.box.box-warning
+					.box.box-header.with-border
+						h3.box-title 简单元素
+					.box-body
+						form(role="form")
+							.form-group
+								label 文本框
+								input.form-control(type="text",placeholder="输入……")
+							.form-group
+								label 无效文本框
+								input.form-control(type="text",placeholder="输入……",disabled)
+							.form-group
+								label 多行文本框
+								textarea.form-control(rows="3",placeholder="输入……")
+							.form-group
+								label 无效多行文本框
+								textarea.form-control(rows="3",placeholder="输入……",disabled)
+							//-输入状态
+							.form-group.has-success
+								label.control-label(for="inputSuccess")
+									i.fa.fa-check
+									|检查通过
+								input.form-control(type="text",id="inputSuccess",placeholder="输入……")
+							.form-group.has-warning
+								label.control-label(for="inputWarning")
+									i.fa.fa-bell-o
+									|警告
+								input.form-control(type="text",id="inputWarning",placeholder="输入……")
+							.form-group.has-error
+								label.control-label(for="inputError")
+									i.fa.fa-times-circle-o
+									|错误
+								input.form-control(type="text",id="inputError",placeholder="输入……")
+							.form-group
+								.checkbox
+									label
+										input(type="checkbox")
+										|检查框1
+								.checkbox
+									label
+										input(type="checkbox")
+										|检查框2
+								.checkbox
+									label
+										input(type="checkbox",disabled)
+										|无效检查框
+							.form-group
+								.radio
+									label
+										input(type="radio",name="optionsRadios",id="optionsRadios1",
+											value="选项1",
+											checked)
+										|选项1
+								.radio
+									label
+										input(type="radio",name="optionsRadios",id="optionsRadios2",
+											value="选项2"
+											)
+										|选项2&nbsp;被选中时会取消选项1的选中状态
+								.radio
+									label
+										input(type="radio",name="optionsRadios",id="optionsRadios3",
+											value="选项3",disabled
+											)
+										|选项3 是无效选项
+							.form-group
+								label 下拉框
+								select.form-control
+									option(value="选项1") 选项1
+									option(value="选项2") 选项2
+									option(value="选项3") 选项3
+									option(value="选项4") 选项4
+									option(value="选项5") 选项5
+							.form-group
+								label 无效下拉框
+								select.form-control(disabled)
+									option(value="选项1") 选项1
+									option(value="选项2") 选项2
+									option(value="选项3") 选项3
+									option(value="选项4") 选项4
+									option(value="选项5") 选项5
+							.form-group
+								label 多选下拉框
+								select.form-control(multiple)
+									option(value="选项1") 选项1
+									option(value="选项2") 选项2
+									option(value="选项3") 选项3
+									option(value="选项4") 选项4
+									option(value="选项5") 选项5
+							.form-group
+								label 无效多选下拉框
+								select.form-control(multiple,disabled)
+									option(value="选项1") 选项1
+									option(value="选项2") 选项2
+									option(value="选项3") 选项3
+									option(value="选项4") 选项4
+									option(value="选项5") 选项5
+
+
+
+
+
+

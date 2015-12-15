@@ -1,0 +1,214 @@
+extends ../layout
+
+block content
+	section.content-header
+		h1=title
+			small welcome to #{title}
+		ol.breadcrumb
+			li
+				a(href="/index-zfh")
+					i.fa.fa-dashboard
+					|首页&nbsp;
+			li.active 扩展表单
+
+	section.content
+		.box.box-default
+			.box-header.with-border
+				h3.box-title 下拉框样式2
+				.box-tools.pull-right
+					button.btn.btn-box-tool(type="button",data-widget="collapse")
+						i.fa.fa-minus
+					button.btn.btn-box-tool(type="button",data-widget="remove")
+						i.fa.fa-remove
+			.box-body
+				.row
+					.col-md-6
+						.form-group
+							label 最小的
+							select.form-control.select2(style="width:100%")
+								option(value="北京",selected="selected") 北京
+								option(value="上海") 上海
+								option(value="深圳") 深圳
+								option(value="广州") 广州
+								option(value="香港") 香港
+								option(value="澳门") 澳门
+						.form-group
+							label 无效的
+							select.form-control.select2(style="width:100%",disabled)
+								option(value="北京",selected="selected") 北京
+								option(value="上海") 上海
+								option(value="深圳") 深圳
+								option(value="广州") 广州
+								option(value="香港") 香港
+								option(value="澳门") 澳门
+					.col-md-6
+						.form-group
+							label 多选的
+							select.form-control.select2(style="width:100%",multiple,data-placeholder="选择一个地区")
+								option(value="北京",selected="selected") 北京
+								option(value="上海") 上海
+								option(value="深圳") 深圳
+								option(value="广州") 广州
+								option(value="香港") 香港
+								option(value="澳门") 澳门
+						.form-group
+							label 无效的选项
+							select.form-control.select2(style="width:100%")
+								option(value="北京",selected="selected") 北京
+								option(value="上海",disabled) 上海
+								option(value="深圳") 深圳
+								option(value="广州") 广州
+								option(value="香港",disabled) 香港
+								option(value="澳门") 澳门
+			.box-footer
+				|访问
+				a(href="https://select2.github.io/") Select2文档
+				|查看更多关于Select2的示例和信息
+
+		.row
+			.col-md-6
+				.box.box-danger
+					.box-header.with-border
+						h3.box-title 输入格式
+					.box-body
+						.form-group
+							label 日期格式
+							.input-group
+								.input-group-addon
+									i.fa.fa-calendar
+								input.form-control(type="text",data-inputmask="'alias':'dd/mm/yyyy'",data-mask)
+						.form-group
+							.input-group
+								.input-group-addon
+									i.fa.fa-calendar
+								input.form-control(type="text",data-inputmask="'alias':'mm/dd/yyyy'",data-mask)
+						.form-group
+							label 电话输入格式
+							.input-group
+								.input-group-addon
+									i.fa.fa-phone
+								input.form-control(type="text",data-inputmask="'mask':'999- 999 9999'", data-mask)
+						.form-group
+							label IP输入格式
+							.input-group
+								.input-group-addon
+									i.fa.fa-laptop
+								input.form-control(type="text",data-inputmask="'alias':'ip'", data-mask)
+
+				.box.box-info
+					.box-header.with-border
+						h3.box-title 颜色&时间选择器
+					.box-body
+						.form-group
+							label 颜色选择器：
+							input.form-control.my-colorpicker1(type="text")
+						.form-group
+							label 带按钮的颜色选择器：
+							.input-group.my-colorpicker2
+								input.form-control(type="text")
+								.input-group-addon
+									i
+						.bootstrap-timepicker
+							.form-group
+								label 时间选择器
+								.input-group
+									input.form-control.timepicker(type="text")
+									.input-group-addon
+										i.fa.fa-clock-o
+
+			//-右侧
+			.col-md-6
+				.box.box-primary
+					.box.box-header.with-border
+						h3.box-title 日期选择器
+					.box-body
+						.form-group
+							label 日期区间：
+							.input-group
+								.input-group-addon
+									i.fa.fa-calendar
+								input.form-control.pull-right(type="text",id="reservation")
+						.form-group
+							label 日期+时间区间：
+							.input-group
+								.input-group-addon
+									i.fa.fa-clock-o
+								input.form-control.pull-right(type="text",id="reservationtime")
+						.form-group
+							label 日期区间按钮：
+							.input-group
+								button.btn.btn-default.pull-right(type="button",id="daterange-btn")
+									i.fa.fa-calendar
+									|日期区间选择器
+									i.fa.fa-caret-down
+
+				.box.box-success
+					.box-header
+						h3.box-title iCheck-单选框&amp;复选框输入
+					.box-body
+						.form-group
+							label
+								input.minimal(type="checkbox",checked)
+							label
+								input.minimal(type="checkbox")
+							label
+								input.minimal(type="checkbox",disabled)
+								|小号复选框皮肤
+						.form-group
+							label
+								input.minimal(type="radio",name="r1",checked)
+							label
+								input.minimal(type="radio",name="r1")
+							label
+								input.minimal(type="radio",name="r1",disabled)
+								|小号单选框皮肤
+
+						.form-group
+							label
+								input.minimal-red(type="checkbox",checked)
+							label
+								input.minimal-red(type="checkbox")
+							label
+								input.minimal-red(type="checkbox",disabled)
+								|小号红色复选框皮肤
+						.form-group
+							label
+								input.minimal-red(type="radio",name="r2",checked)
+							label
+								input.minimal-red(type="radio",name="r2")
+							label
+								input.minimal-red(type="radio",name="r2",disabled)
+								|小号红色单选框皮肤
+						.form-group
+							label
+								input.flat-red(type="checkbox",checked)
+							label
+								input.flat-red(type="checkbox")
+							label
+								input.flat-red(type="checkbox",disabled)
+								|扁平绿色复选框皮肤
+						.form-group
+							label
+								input.flat-red(type="radio",name="r3",checked)
+							label
+								input.flat-red(type="radio",name="r3")
+							label
+								input.flat-red(type="radio",name="r3",disabled)
+								|扁平绿色单选框皮肤
+
+					.box-footer
+						|更多的皮肤请查看文档
+						a(href="http://fronteed.com/iCheck/") iCheck插件
+
+
+block pagesrc
+	script(src="/bower_components/AdminLTE/plugins/select2/select2.full.min.js")
+	script(src="/bower_components/AdminLTE/plugins/input-mask/jquery.inputmask.js")
+	script(src="/bower_components/AdminLTE/plugins/input-mask/jquery.inputmask.date.extensions.js")
+	script(src="/bower_components/AdminLTE/plugins/input-mask/jquery.inputmask.extensions.js")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js")
+	script(src="/bower_components/AdminLTE/plugins/daterangepicker/daterangepicker.js")
+	script(src="/bower_components/AdminLTE/plugins/colorpicker/bootstrap-colorpicker.min.js")
+	script(src="/bower_components/AdminLTE/plugins/timepicker/bootstrap-timepicker.min.js")
+	script(src="/bower_components/AdminLTE/plugins/iCheck/icheck.min.js")
+	script(src="/js/form.js")
