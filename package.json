@@ -15,6 +15,7 @@
     "errorhandler": "^1.4.2",
     "express": "~4.13.1",
     "express-session": "^1.12.1",
+    "is": "^3.1.0",
     "jade": "~1.11.0",
     "moment": "^2.10.6",
     "mongoose": "^4.2.6",
@@ -22,7 +23,8 @@
     "serve-favicon": "~2.3.0",
     "superagent": "^1.4.0",
     "underscore": "^1.8.3",
-    "utility": "^1.5.0"
+    "utility": "^1.5.0",
+    "validator": "^4.4.0"
   },
   "devDependencies": {
     "xmlhttprequest": "^1.8.0",
