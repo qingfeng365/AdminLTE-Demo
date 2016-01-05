@@ -1,0 +1,101 @@
+extends ../layout	
+
+block content
+	section.content-header
+		h1= title
+			//- small Welcome to #{title}
+		ol.breadcrumb
+			li
+				a(href="#")
+					i.fa.fa-dashboard  上级
+			li.active #{title}
+	section.content
+		.row
+			.col-xs-12
+				.box
+					.box-header
+						form#searchForm(action="#", method="POST", role="form")
+							.input-group
+								input.form-control(type="text",name="search[text]",placeholder="输入搜索内容...",required)
+								span.input-group-btn
+									button.btn.btn-info.btn-flat(type="submit") 搜索
+					.box-body
+						table.table.table-bordered.table-hover
+							thead
+								tr
+									th 商品分类
+									th 显示标题
+									th 分类描述
+									th 显示顺序
+									th 上级分类
+									th 不显示
+									th 是停用
+									th 级次
+									th 操作
+							tbody
+								tr
+									td 汽车电子
+									td 汽车电子
+									td 汽车电子
+									td 1
+									td 
+									td 否
+									td 否
+									td 1
+									td
+										a.btn.btn-success.btn-sm(href="#") 增下级
+										span &nbsp;
+										a.btn.btn-primary.btn-sm(href="#") 修改
+										span &nbsp;
+										button.del.btn.btn-danger.btn-sm(type="button", data-id="0",data-toggle='modal',data-target='#delConfirm') 删除
+										span &nbsp;
+										button.del.btn.btn-warning.btn-sm(type="button", data-id="0",data-toggle='modal',data-target='#delConfirm') 分类属性
+								tr
+									td GPS系列
+									td GPS系列
+									td GPS系列
+									td 1
+									td 汽车电子
+									td 否
+									td 否
+									td 2
+									td
+										a.btn.btn-success.btn-sm(href="#") 增下级
+										span &nbsp;
+										a.btn.btn-primary.btn-sm(href="#") 修改
+										span &nbsp;
+										button.del.btn.btn-danger.btn-sm(type="button", data-id="0",data-toggle='modal',data-target='#delConfirm') 删除
+										span &nbsp;
+										button.del.btn.btn-warning.btn-sm(type="button", data-id="0",data-toggle='modal',data-target='#delConfirm') 分类属性
+								tr
+									td 坐垫脚垫
+									td 坐垫脚垫
+									td 坐垫脚垫
+									td 2
+									td 
+									td 否
+									td 否
+									td 1
+									td
+										a.btn.btn-success.btn-sm(href="#") 增下级
+										span &nbsp;
+										a.btn.btn-primary.btn-sm(href="#") 修改
+										span &nbsp;
+										button.del.btn.btn-danger.btn-sm(type="button", data-id="0",data-toggle='modal',data-target='#delConfirm') 删除
+										span &nbsp;
+										button.del.btn.btn-warning.btn-sm(type="button", data-id="0",data-toggle='modal',data-target='#delConfirm') 分类属性
+					.box-footer.clearfix
+						button.btn.btn-success(type="button") 新增顶级分类						
+						ul.pagination.pagination-sm.no-margin.pull-right
+							li
+								a(href="#") &laquo;
+							li
+								a(href="#") 1
+							li
+								a(href="#") 2
+							li
+								a(href="#") 3
+							li
+								a(href="#") &raquo;
+
+

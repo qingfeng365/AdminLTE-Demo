@@ -1,0 +1,63 @@
+extends ../layout	
+
+block content
+	section.content-header
+		h1= title
+			//- small Welcome to #{title}
+		ol.breadcrumb
+			li
+				a(href="#")
+					i.fa.fa-dashboard  上级
+			li.active #{title}
+	section.content
+		.row
+			.col-xs-12
+				.box.box-primary
+					form(role="form")
+						.box-body
+							.form-group
+								label(for="inputEmail1") 商品分类
+								input.form-control(type="email",id="inputEmail1",placeholder="请输入商品分类名称",value='汽车电子',disabled)
+							.form-group
+								label(for="inputEmail1") 分类描述
+								textarea.form-control(type="email",id="inputEmail1",placeholderd="请输入商品分类的描述说明",disabled)
+					form(role="form")
+						.box-body
+							.form-group
+								label(for="inputEmail1") 属性名称
+								select.form-control.disabled
+									option(value="品牌") 品牌
+									option(value="适用车型") 适用车型
+									option(value="产地") 产地
+									option(value="颜色") 颜色
+							.form-group
+								label(for="inputEmail1") 编辑框类型
+								input.form-control(type="email",id="inputEmail1",placeholder="请输入商品分类名称",value='下拉',disabled)
+							.form-group
+								label(for="inputEmail1") 默认值
+								textarea.form-control(type="email",id="inputEmail1",placeholder="请输入属性的默认值")
+							.form-group
+								label(for="inputEmail1") 显示顺序
+								input.form-control(type="email",id="inputEmail1",placeholder="属性输入时的提示内容",value='1')
+							.form-group
+								label(for="inputEmail1") 分组名
+								input.form-control(type="email",id="inputEmail1",placeholder="属性输入时的提示内容",value='基本特征')
+							.form-group
+								label(for="inputEmail1") 输入提示
+								input.form-control(type="email",id="inputEmail1",placeholder="属性输入时的提示内容",value='商品所属的品牌')
+							.form-group
+								.checkbox
+									label
+										input(type="checkbox")
+										|下拉值可多选
+								.checkbox
+									label
+										input(type="checkbox")
+										|可用于SKU码
+								.checkbox
+									label
+										input(type="checkbox")
+										|可用于搜索
+						.box-footer.clearfix
+							button.btn.btn-success(type="submit") 保存
+							button.btn.btn-warning.pull-right(type="submit") 取消

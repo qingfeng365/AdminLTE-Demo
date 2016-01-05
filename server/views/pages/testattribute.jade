@@ -1,0 +1,77 @@
+extends ../layout	
+
+block content
+	section.content-header
+		h1= title
+			//- small Welcome to #{title}
+		ol.breadcrumb
+			li
+				a(href="#")
+					i.fa.fa-dashboard  上级
+			li.active #{title}
+	section.content
+		.row
+			.col-xs-12
+				.box
+					.box-header
+						form#searchForm(action="#", method="POST", role="form")
+							.input-group
+								input.form-control(type="text",name="search[text]",placeholder="输入搜索内容...",required)
+								span.input-group-btn
+									button.btn.btn-info.btn-flat(type="submit") 搜索
+					.box-body
+						table.table.table-bordered.table-hover
+							thead
+								tr
+									th 属性名称
+									th 编辑框类型
+									th 默认值
+									th 下拉值可多选
+									th 输入提示
+									th 操作
+							tbody
+								tr
+									td 品牌
+									td 下拉
+									td 
+									td 否
+									td 商品所属的品牌
+									td
+										a.btn.btn-primary.btn-sm(href="#") 修改
+										span &nbsp;
+										button.del.btn.btn-danger.btn-sm(type="button", data-id="0",data-toggle='modal',data-target='#delConfirm') 删除
+								tr
+									td 适用车型
+									td 多行文本
+									td 
+									td 否
+									td 商品所属的品牌
+									td
+										a.btn.btn-primary.btn-sm(href="#") 修改
+										span &nbsp;
+										button.del.btn.btn-danger.btn-sm(type="button", data-id="0",data-toggle='modal',data-target='#delConfirm') 删除
+								tr
+									td 产地
+									td 下拉
+									td 
+									td 否
+									td 商品生产地址所在的城市
+									td
+										a.btn.btn-primary.btn-sm(href="#") 修改
+										span &nbsp;
+										button.del.btn.btn-danger.btn-sm(type="button", data-id="0",data-toggle='modal',data-target='#delConfirm') 删除
+					.box-footer.clearfix
+						button.btn.btn-success(type="button") 新增属性						
+						ul.pagination.pagination-sm.no-margin.pull-right
+							li
+								a(href="#") &laquo;
+							li
+								a(href="#") 1
+							li
+								a(href="#") 2
+							li
+								a(href="#") 3
+							li
+								a(href="#") &raquo;
+
+

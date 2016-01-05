@@ -50,3 +50,21 @@ module.exports.mail2czp = function(req, res, next) {
 module.exports.mail3czp = function(req, res, next) {
   res.render('mail3', { title: 'mail3 czp' });
 };
+module.exports.testgoodsclass = function(req, res, next) {
+  res.render('testgoodsclass', { title: '商品分类' });
+};
+module.exports.testgoodsclassedit = function(req, res, next) {
+  res.render('testgoodsclassedit', { title: '编辑商品分类' });
+};
+module.exports.testattribute = function(req, res, next) {
+  res.render('testattribute', { title: '属性' });
+};
+module.exports.testattributeedit = function(req, res, next) {
+  res.render('testattributeedit', { title: '编辑属性' });
+};
+module.exports.testgoodsclassattribute = function(req, res, next) {
+  res.render('testgoodsclassattribute', { title: '商品分类属性' });
+};
+module.exports.testgoodsclassattributeedit = function(req, res, next) {
+  res.render('testgoodsclassattributeedit', { title: '编辑商品分类属性' });
+};

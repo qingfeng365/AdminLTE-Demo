@@ -20,6 +20,12 @@ router.get('/table-data', indexController.tabledataczp);
 router.get('/mail1', indexController.mail1czp);
 router.get('/mail2', indexController.mail2czp);
 router.get('/mail3', indexController.mail3czp);
+router.get('/test/goodsclass',indexController.testgoodsclass);
+router.get('/test/goodsclassedit',indexController.testgoodsclassedit);
+router.get('/test/attribute',indexController.testattribute);
+router.get('/test/attributeedit',indexController.testattributeedit);
+router.get('/test/goodsclassattribute',indexController.testgoodsclassattribute);
+router.get('/test/goodsclassattributeedit',indexController.testgoodsclassattributeedit);
 
 
 module.exports = router;

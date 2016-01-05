@@ -1,0 +1,42 @@
+extends ../layout	
+
+block content
+	section.content-header
+		h1= title
+			//- small Welcome to #{title}
+		ol.breadcrumb
+			li
+				a(href="#")
+					i.fa.fa-dashboard  上级
+			li.active #{title}
+	section.content
+		.row
+			.col-xs-12
+				.box.box-primary
+					form(role="form")
+						.box-body
+							.form-group
+								label(for="inputEmail1") 属性名称
+								input.form-control(type="email",id="inputEmail1",placeholder="请输入属性名称",value='品牌')
+							.form-group
+								label 编辑框类型
+								select.form-control
+									option(value="单行文本") 单行文本
+									option(value="数值") 数值
+									option(value="日期") 日期
+									option(value="下拉") 下拉
+									option(value="多行文本") 多行文本
+							.form-group
+								label(for="inputEmail1") 默认值
+								textarea.form-control(type="email",id="inputEmail1",placeholder="请输入属性的默认值")
+							.form-group
+								label(for="inputEmail1") 输入提示
+								input.form-control(type="email",id="inputEmail1",placeholder="属性输入时的提示内容",value='商品所属的品牌')
+							.form-group
+								.checkbox
+									label
+										input(type="checkbox")
+										|下拉值可多选
+						.box-footer.clearfix
+							button.btn.btn-success(type="submit") 保存
+							button.btn.btn-warning.pull-right(type="submit") 取消
