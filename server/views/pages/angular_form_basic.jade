@@ -13,7 +13,7 @@ block content
 				li.active 简单表单
 		section.content(ng-controller="myctrl",
 			ng-init="pagedata=#{pagedata};pageoption=#{pageoption}")
-			.row
+			.row(ng-show="pageoption.env.toLowerCase()==='development'")
 				pre=inputdata
 			.row
 				.col-md-10.col-md-offset-1
@@ -64,7 +64,7 @@ block content
 										| 客户
 									.col-md-5
 										ui-select(ng-model="input.person",theme="bootstrap",required,
-										  on-select="onselect($select,$item)")
+										  on-select="onselect($select,$item)",name="input[person]")
 											ui-select-match(placeholder="请选择客户...",allow-clear="true") {{$select.selected.name}} : {{$select.selected.email}}
 											ui-select-choices(repeat="item in pagedata.people | filter: $select.search")
 												div(ng-bind-html="item.name | highlight: $select.search")
