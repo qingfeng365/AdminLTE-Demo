@@ -1,0 +1,93 @@
+extends ../layout
+
+block content
+	div(ng-app="myapp")
+		section.content-header
+			h1=title
+				small welcome to #{title}
+			ol.breadcrumb
+				li
+					a(href="/")
+						i.fa.fa-dashboard
+						|首页&nbsp;
+				li.active 简单表单
+		section.content(ng-controller="myctrl",
+			ng-init="pagedata=#{pagedata};pageoption=#{pageoption}")
+			.row
+				pre=inputdata
+			.row
+				.col-md-10.col-md-offset-1
+					.box.box-primary
+						.box-header.with-border
+							h3.box-title 表单标题
+						form.form-horizontal(name="form",action="/angular/basicform",method="post",autocomplete="off")
+							.box-body
+								.form-group.has-feedback(ng-class="{'has-success':form['input[text1]'].$valid && form['input[text1]'].$dirty,'has-error':form['input[text1]'].$invalid && form['input[text1]'].$dirty}")
+									label.col-md-3.control-label
+										strong.text-danger *
+										| 普通文本标题 
+									.col-md-5
+										input.form-control(type="text",name="input[text1]",placeholder="请输入0-9的数字",ng-model="input.text1" required, ng-minlength="2", ng-maxlength="10", ng-pattern="/^[0-9]*$/", autofocus
+											)
+										span.glyphicon.glyphicon-ok.form-control-feedback(ng-show="form['input[text1]'].$valid && form['input[text1]'].$dirty")
+										span.glyphicon.glyphicon-exclamation-sign.form-control-feedback(ng-show="form['input[text1]'].$invalid && form['input[text1]'].$dirty")
+										div(ng-messages="form['input[text1]'].$error",ng-show="form['input[text1]'].$dirty")
+											label.label(ng-message="required") 请输入字段1的内容
+											label.label(ng-message="pattern") 只允许输入0-9的数字
+											label.label(ng-message="minlength, maxlength") 请输入长度在2-10之间的数字
+									.col-md-4
+										p.help-block 普通文本说明文字普通文本说明文字.....
+								.form-group(ng-class="{'has-success':form['input[date]'].$valid && form['input[date]'].$dirty,'has-error':form['input[date]'].$invalid && form['input[date]'].$dirty}")
+									label.col-md-3.control-label
+										strong.text-danger *
+										| 单据日期
+									.col-md-5
+										.input-group
+											input.form-control(type="text",name="input[date]",uib-datepicker-popup="yyyy-MM-dd",
+											is-open="pagestatus.dateopen",ng-Model="input.date",
+											current-text="今天",
+											clear-text="清除",
+											close-text="关闭",
+											placeholder="yyyy-MM-dd",
+											required)
+											span.input-group-btn
+												button.btn.btn-info(type="button",ng-click="pagestatus.dateopen=true")
+													i.glyphicon.glyphicon-calendar
+										div(ng-messages="form['input[date]'].$error",ng-show="form['input[date]'].$dirty")
+											.help-block(ng-message="required") 请选择单据日期
+											.help-block(ng-message="pattern date") 请按yyyy-MM-dd格式输入有效的日期
+									.col-md-4
+										p.help-block
+								.form-group(ng-class="{'has-success':form['input[person]'].$valid && form['input[person]'].$dirty,'has-error':form['input[person]'].$invalid && form['input[person]'].$dirty}")
+									label.col-md-3.control-label
+										strong.text-danger *
+										| 客户
+									.col-md-5
+										ui-select(ng-model="input.person",theme="bootstrap",required,
+										  on-select="onselect($select,$item)")
+											ui-select-match(placeholder="请选择客户...",allow-clear="true") {{$select.selected.name}} : {{$select.selected.email}}
+											ui-select-choices(repeat="item in pagedata.people | filter: $select.search")
+												div(ng-bind-html="item.name | highlight: $select.search")
+												small(ng-bind-html="item.email | highlight: $select.search")
+										input(type="text", name="input[person]", ng-model="input.person.name",
+										  ng-show="false")
+										div(ng-messages="form['input[person]'].$error",ng-show="form['input[person]'].$dirty")
+											.help-block(ng-message="required") 请选择客户
+									.col-md-4
+										p.help-block
+							.box-footer
+								input.btn(type="submit",ng-click="btnsubmit($event)",
+									ng-disabled="!form.$valid",ng-class="{'btn-primary':form.$valid}",value="提交")
+			.row(ng-show="pageoption.env.toLowerCase()==='development'")
+				.col-md-12
+					.box.box-success
+						ul.nav.nav-stacked
+							li
+								p input
+								pre {{input|json}}
+							li
+								p formcontroller
+								pre {{form|json}}
+block pagesrc
+	script(src="/js/angular_form_basic.js")
+	

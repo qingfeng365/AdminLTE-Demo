@@ -3,6 +3,8 @@
 var express = require('express');
 var router = express.Router();
 var indexController = require('../controllers/index');
+var angularController = require('../controllers/angular');
+
 
 /* GET home page. */
 router.get('/', indexController.index);
@@ -26,6 +28,9 @@ router.get('/test/attribute',indexController.testattribute);
 router.get('/test/attributeedit',indexController.testattributeedit);
 router.get('/test/goodsclassattribute',indexController.testgoodsclassattribute);
 router.get('/test/goodsclassattributeedit',indexController.testgoodsclassattributeedit);
+
+router.get('/angular/basicform', angularController.basicform);
+router.post('/angular/basicform', angularController.postbasicform);
 
 
 module.exports = router;

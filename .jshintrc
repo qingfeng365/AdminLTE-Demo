@@ -16,5 +16,14 @@
   "unused": false,
   "strict": true,
   "lastsemic": true,
-  "latedef": "nofunc"
+  "latedef": "nofunc",
+  "globals": {
+    "angular"   : false,
+    "jasmine"   : false,
+    "$"         : false,
+    "_"         : false,
+    "module"    : false,
+    "require"   : false
+  }
 }
+

@@ -31,6 +31,7 @@
     "angular-message-format": "~1.4.8",
     "angular-touch": "~1.4.8",
     "selectize": "~0.12.1",
-    "ui-select": "angular-ui-select#~0.13.2"
+    "ui-select": "angular-ui-select#~0.13.2",
+    "angular-locale_zh-cn": "*"
   }
 }
