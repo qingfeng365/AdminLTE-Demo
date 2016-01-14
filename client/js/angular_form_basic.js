@@ -4,9 +4,11 @@ var myapp = angular.module('myapp', ['ngMessages','ngLocale','ui.bootstrap',
   'ui.select','ngSanitize','ui.validate']);
 
 myapp.controller('myctrl', ['$scope', function ($scope,$event) {
-	$scope.patternNum = '/^[0-9]*$/';
+	$scope.patternNum = /^[0-9]*$/;
 	$scope.pagestatus={
 		dateopen: false,
+    datebeginopen: false,
+    dateendopen: false,
 	};
 
   $scope.input = {};
