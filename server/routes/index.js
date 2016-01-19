@@ -4,6 +4,7 @@ var express = require('express');
 var router = express.Router();
 var indexController = require('../controllers/index');
 var angularController = require('../controllers/angular');
+var angularControllerHby = require('../controllers/angular_hby');
 
 
 /* GET home page. */
@@ -31,6 +32,10 @@ router.get('/test/goodsclassattributeedit',indexController.testgoodsclassattribu
 
 router.get('/angular/basicform', angularController.basicform);
 router.post('/angular/basicform', angularController.postbasicform);
+
+router.get('/angular/basicformhby', angularControllerHby.basicform);
+router.post('/angular/basicformhby', angularControllerHby.postbasicform);
+
 
 
 module.exports = router;
