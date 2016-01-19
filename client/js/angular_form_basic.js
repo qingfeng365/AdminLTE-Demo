@@ -11,8 +11,13 @@ myapp.controller('myctrl', ['$scope', function ($scope,$event) {
     dateendopen: false,
 	};
 
-  $scope.input = {};
+
+  $scope.input = {
+    // person:{
+    // }
+  };
   $scope.input.text1 = 'text1';
+
   $scope.btnsubmit = function($event){
   	console.log($event);
   	alert('ok');
@@ -23,5 +28,17 @@ myapp.controller('myctrl', ['$scope', function ($scope,$event) {
   $scope.onselect = function($select,$item){
     console.log($select);
     console.log($item);
-  }
+  };
+  $scope.checkBignum = function(value){
+    return (parseInt(value) > 5000);
+  };
+  $scope.checkDateAfterNow = function(value){
+    return validator.isAfter(value,new Date());
+  };
+  $scope.checkDatebegin = function(value){
+    return validator.isBefore(value,$scope.input.dateend);
+  };
+  $scope.checkDateend = function(value){
+    return validator.isAfter(value,$scope.input.datebegin);
+  };
 }]);
