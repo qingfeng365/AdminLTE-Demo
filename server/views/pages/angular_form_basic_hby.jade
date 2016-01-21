@@ -108,6 +108,17 @@ block content
 											label.label(ng-message="validator") 结束日期不能小于起始日期							
 									.col-md-4
 										p.help-block
+								.form-group.has-feedback
+									labe.col-md-3.control-label 验证码
+									.col-md-5
+										.input-group
+											input.form-control(type="text",ng-model="validcode",
+												required,name="validcode")
+												img.form-control-feedback(ng-src="/validimgcode?id={{validcodeid}}",style="width:80px;right:54px;",)
+											span.input-group-btn
+												button.btn.btn-info(type="button") 刷新
+									.col-md-4
+										p.help-block
 							.box-footer
 								input.btn(type="submit",value="提交",ng-disabled="!form.$valid",ng-class="{'btn-primary':form.$valid}")
 			.row
@@ -124,3 +135,4 @@ block content
 								pre {{form|json}}
 block pagesrc
 	script(src="/js/angular_form_basic_hby.js")
+	script(src="/js/Math.uuid.js")	

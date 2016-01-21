@@ -79,8 +79,9 @@ app.use(function(req, res, next){
  */
 app.use('/', routes);
 
+var validimgcode = require('./routes/validimgcode');
 
-
+app.use('/validimgcode', validimgcode);
 /**
  * 应用程序普通服务路由（注意：服务路由不要加用户权限控制）
  */

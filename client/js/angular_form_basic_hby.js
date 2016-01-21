@@ -6,6 +6,8 @@ var pageapp = angular.module('pageapp',['ngMessages','ui.bootstrap','ngLocale',
 
 pageapp.controller('pagectrl',['$scope',function($scope){//pagectrl:控制器名称,$scope作用域 ，此为约定写法
 	// console.log('pagectrl run...');
+	$scope.validcodeid = Math.uuid();
+	console.log($scope.validcodeid);
 	$scope.patternNum = /^[0-9]+$/;
 	$scope.pagestatus = {
 		dataopen: false,
