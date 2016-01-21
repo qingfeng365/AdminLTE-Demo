@@ -31,6 +31,9 @@ pageapp.controller('pagectrl',['$scope',function($scope){//pagectrl:控制器名
 	$scope.checkDateEnd = function(value){
 		return (validator.isAfter(value,$scope.input.datebegin));
 	};
+	$scope.changevalidimg = function(){
+		$scope.validcodeid = Math.uuid();
+	};
 
 }]);
 	console.log('pageapp end.'); //先执行pageapp end 再执行pagectrl run...

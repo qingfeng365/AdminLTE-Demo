@@ -116,7 +116,7 @@ block content
 												required,name="validcode")
 												img.form-control-feedback(ng-src="/validimgcode?id={{validcodeid}}",style="width:80px;right:54px;",)
 											span.input-group-btn
-												button.btn.btn-info(type="button") 刷新
+												button.btn.btn-info(type="button",ng-click="changevalidimg()") 刷新
 									.col-md-4
 										p.help-block
 							.box-footer
