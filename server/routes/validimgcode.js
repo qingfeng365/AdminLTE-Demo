@@ -10,7 +10,7 @@ var validimgcodeController = require('../controllers/validimgcode');
 router.get('/', validimgcodeController.getValidImg);
 
 /**
- * 
+ * 提交验证码进行检查
  */
 router.post('/', validimgcodeController.checkValidImgCode);
 
