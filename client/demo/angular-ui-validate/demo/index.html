@@ -71,7 +71,7 @@
                        A validator function will trigger validation on both model and input changes.</p>
                 </div>
                 <div class="col-md-6">
-                    <pre class="prettyprint">&lt;input name="email" ng-model="email"
+                    <pre class="prettyprint">&lt;input nasv me="email" ng-model="email"
                         <strong>ui-validate</strong>="{blacklist : 'notBlackListed($value)' }"&gt; Is e-mail black-listed? {{!!form.email.$error.blacklist}}
                         <strong>ui-validate-async</strong>="{alreadyExists: 'doesNotExist($modelValue)' }"&gt; Is e-mail already registered? {{!!form.email.$error.alreadyExists}}
                         &lt;input name=&quot;password&quot; required ng-model=&quot;password&quot;&gt; &lt;input name=&quot;confirm_password&quot;

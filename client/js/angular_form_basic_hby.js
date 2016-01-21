@@ -14,5 +14,21 @@ pageapp.controller('pagectrl',['$scope',function($scope){//pagectrl:控制器名
 		name:'abc'
 	};
 	console.log($scope);
+
+	$scope.checkName = function(value){
+		return (parseInt(value,10) > 5000);
+	};
+
+	$scope.checkDate = function(value){
+		return (validator.isAfter(value,new Date()));
+	};
+
+	$scope.checkDateBegin = function(value){
+		return (validator.isBefore(value,$scope.input.dateend));
+	};
+	$scope.checkDateEnd = function(value){
+		return (validator.isAfter(value,$scope.input.datebegin));
+	};
+
 }]);
 	console.log('pageapp end.'); //先执行pageapp end 再执行pagectrl run...

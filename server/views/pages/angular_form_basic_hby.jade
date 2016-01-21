@@ -25,13 +25,16 @@ block content
 										| 文本标题
 									.col-md-5
 										input.form-control(type="text",name="input[name]",ng-model="input.name",
-											required,ng-minlength="2",ng-maxlength="8",ng-pattern="patternNum")
+											required,
+											ng-minlength="2",ng-maxlength="8",ng-pattern="patternNum",
+											ui-validate="{bigvalue:'checkName($value)'}")
 										span.glyphicon.glyphicon-ok.form-control-feedback(ng-show="form['input[name]'].$valid && form['input[name]'].$dirty")
 										span.glyphicon.glyphicon-exclamation-sign.form-control-feedback(ng-show="form['input[name]'].$invalid && form['input[name]'].$dirty")
-										//- div(ng-messages="form['input[name].$error']",ng-show="form['input[name]'].$dirty")
-										//- 	label.label(ng-message="required") 请输入名称
-										//- 	label.label(ng-message="minlength,maxlength") 请输入2-8位的数字
-										//- 	label.label(ng-message="pattern") 请输入0-9的数字
+										div(ng-messages="form['input[name].$error']",ng-show="form['input[name]'].$dirty")
+											label.label(ng-message="required") 请输入名称
+											label.label(ng-message="minlength,maxlength") 请输入2-8位的数字
+											label.label(ng-message="pattern") 请输入0-9的数字
+											label.label(ng-message="bigvalue") 必须大于5000
 									.col-md-4
 										p.help_block 普通文本说明文字普通文本说明文字.....
 								.form-group.has-feedback(ng-class="{'has-success':form['input[date]'].$valid && form['input[date]'].$dirty,'has-error':form['input[date]'].$invalid && form['input[date]'].$dirty}")
@@ -42,11 +45,15 @@ block content
 										.input-group
 											input.form-control(type="text",name="input[date]",uib-datepicker-popup="yyyy-MM-dd",
 												ng-model="input.date",is-open="pagestatus.dataopen",
-												current-text="今天",clear-text="清除",close-text="关闭"
+												current-text="今天",clear-text="清除",close-text="关闭",
+												ui-validate="'checkDate($value)'"
 												)
 											span.input-group-btn
 												button.btn.btn-info(type="button",ng-click="pagestatus.dataopen=true")
 													i.glyphicon.glyphicon-calendar
+											div(ng-messages="form['input[date]'].$error",ng-show="form['input[name]'].$dirty")
+												label.label(ng-message="validator") 日期必须大于今天
+
 									.col-md-4
 										p.help-block
 								.form-group.has-feedback
@@ -60,6 +67,45 @@ block content
 											ui-select-choices(repeat="item in pagedata.people")
 												div(ng-bind-html="item.name | highlight: $select.search")
 										input(type="type",name="input[person][name]",ng-model="input.person.name",ng-show="false")
+									.col-md-4
+										p.help-block
+								.form-group(ng-class="{'has-success':(form['input[datebegin]'].$valid && form['input[datebegin]'].$dirty) || (form['input[dateend]'].$valid && form['input[dateend]'].$dirty),'has-error':(form['input[datebegin]'].$invalid && form['input[datebegin]'].$dirty) || (form['input[dateend]'].$invalid && form['input[dateend]'].$dirty)}")
+									label.col-md-3.control-label 日期
+									.col-md-5
+										.input-group.with100p.text-center
+											| _
+											.pull-left(style="width:47%")
+												.input-group
+													.input.form-control(type="text",name="input[datebegin]",
+														uib-datepicker-popup="yyyy-MM-dd",
+														ng-model="input.datebegin",is-open="pagestatus.databeginopen",
+															current-text="今天",
+															clear-text="清除",
+															close-text="关闭",
+														ui-validate="'checkDateBegin($value)'",
+														ui-validate-watch="'input.dateend'"
+														)
+													span.input-group-btn
+														button.btn.btn-info(type="button",ng-click="pagestatus.databeginopen=true")
+															i.glyphicon.glyphicon-calendar
+											.pull-right(style="width:47%")
+												.input-group
+													.input.form-control(type="text",name="input[dateend]",
+														uib-datepicker-popup="yyyy-MM-dd",
+														ng-model="input.dateend",is-open="pagestatus.dataopenend",
+															current-text="今天",
+															clear-text="清除",
+															close-text="关闭",
+														ui-validate="'checkDateEnd($value)'",
+														ui-validate-watch="'input.datebegin'"
+														)
+													span.input-group-btn
+														button.btn.btn-info(type="button",ng-click="pagestatus.dataendopen=true")
+															i.glyphicon.glyphicon-calendar
+										div(ng-messages="form['input[datebegin]'].$error",ng-show="form['input[datebegin]'].$dirty")
+											label.label(ng-message="validator") 起始日期不能大于结束日期		
+										div(ng-messages="form['input[dateend]'].$error",ng-show="form['input[dateend]'].$dirty")
+											label.label(ng-message="validator") 结束日期不能小于起始日期							
 									.col-md-4
 										p.help-block
 							.box-footer

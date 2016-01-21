@@ -6,6 +6,7 @@ var indexController = require('../controllers/index');
 var angularController = require('../controllers/angular');
 var angularControllerHby = require('../controllers/angular_hby');
 
+var angularControllerhyf = require('../controllers/angular_hyf');
 
 /* GET home page. */
 router.get('/', indexController.index);
@@ -33,9 +34,12 @@ router.get('/test/goodsclassattributeedit',indexController.testgoodsclassattribu
 router.get('/angular/basicform', angularController.basicform);
 router.post('/angular/basicform', angularController.postbasicform);
 
+
 router.get('/angular/basicformhby', angularControllerHby.basicform);
 router.post('/angular/basicformhby', angularControllerHby.postbasicform);
 
+router.get('/angular/basicformhyf', angularControllerhyf.basicform);
+router.post('/angular/basicformhyf', angularControllerhyf.postbasicform);
 
 
 module.exports = router;
