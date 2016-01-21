@@ -33,6 +33,7 @@
     "selectize": "~0.12.1",
     "ui-select": "angular-ui-select#~0.13.2",
     "angular-locale_zh-cn": "*",
-    "validator-js": "~4.5.0"
+    "validator-js": "~4.5.0",
+    "angular-ui-tree": "~2.13.0"
   }
 }
