@@ -53,7 +53,7 @@ var people = [{
 }];
 
 var pagedata = {
-  people:people
+  people: people
 };
 var pageoption = {
   env: 'development'
@@ -76,4 +76,27 @@ module.exports.postbasicform = function (req, res, next) {
     pagedata: JSON.stringify(pagedata),
     pageoption: JSON.stringify(pageoption)
   });
+};
+
+
+module.exports.basicformsubmit = function (req, res, next) {
+  res.render('angular_form_submit', {
+    title: 'angular form ng-submit',
+    pagedata: JSON.stringify(pagedata),
+    pageoption: JSON.stringify(pageoption)
+  });
+};
+
+module.exports.postbasicformsubmit = function (req, res, next) {
+  var inputdata = req.body.input;
+  console.log('inputdata:');
+  console.dir(inputdata);
+  if (inputdata.isStop) {
+
+    req.session.submitstate = 'submit ok';
+    return res.json({success:true});
+  } else {
+    req.session.submitstate = 'submit failed';
+    return res.status(400).json({error:'提交失败'});
+  }
 };

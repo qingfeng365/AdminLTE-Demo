@@ -2,6 +2,10 @@
 
 var validator = require('validator');
 var captchapng = require('captchapng');
+
+// var Cache = require('node-smple-cache');
+// var cache = Cache.createCache('LRU', 100 * 100 * 10);
+
 var cache = require('node-smple-cache').createCache('LRU', 100 * 100 * 10);
 
 module.exports.getValidImg = function (req, res, next) {

@@ -112,6 +112,21 @@ block content
 											.help-block(ng-message="pattern date") 请按yyyy-MM-dd格式输入有效的结束日期	
 											.help-block(ng-message="validator") 结束日期不能小于起始日期											.col-md-4
 										p.help-block
+								.form-group.has-feedback(ng-class="{'has-success':form['validcode'].$valid && form['validcode'].$dirty,'has-error':form['validcode'].$invalid && form['validcode'].$dirty}")
+									label.col-md-3.control-label 验证码
+									.col-md-5
+										.input-group
+											input.form-control(type="text",ng-model="input.validcode", required,
+												name="validcode",
+												ui-validate-async="{validcode:'checkValidCodeAsync($value)'}")
+											img.form-control-feedback(ng-src="/validimgcode?id={{validcodeid}}",style="width:80px;right:54px;z-index:5")
+											span.input-group-btn
+												button.btn.btn-info(type="button",ng-click="changevalidimg()") 刷新
+										div(ng-messages="form['validcode'].$error",ng-show="form['validcode'].$dirty")
+											.help-block(ng-message="required") 请输入验证码
+											.help-block(ng-message="validcode") 验证码不正确														
+									.col-md-4
+										p.help-block
 							.box-footer
 								input.btn(type="submit",value="提交",ng-disabled="!form.$valid",
 								ng-class="{'btn-primary':form.$valid}")
@@ -126,4 +141,5 @@ block content
 								p formcontroller
 								pre {{form|json}}
 block pagesrc
+	script(src="/js/Math.uuid.js")
 	script(src="/js/angular_form_basichyf.js")

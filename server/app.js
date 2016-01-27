@@ -61,6 +61,11 @@ app.use(express.static(path.join(__dirname, '../client')));
  * 应用-权限模块
  */
 
+app.use(function (req, res, next) {
+  console.log('submitstate:'+req.session.submitstate);
+  next();
+});
+
 /**
  * 应用-路由模块
  */
@@ -69,7 +74,7 @@ var routes = require('./routes/index');
 /**
  * 应用程序-session路由
  */
-app.use(function(req, res, next){
+app.use(function (req, res, next) {
   res.locals.loginuser = req.session.loginuser;
   next();
 });
@@ -92,7 +97,7 @@ app.use('/validimgcode', validimgcode);
 /**
  * 错误处理路由-404
  */
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
   next(err);
@@ -102,7 +107,7 @@ app.use(function(req, res, next) {
  * 错误处理路由-开发状态-error stacktrace
  */
 if (app.get('env') === 'development') {
-  app.use(function(err, req, res, next) {
+  app.use(function (err, req, res, next) {
     res.status(err.status || 500);
     res.render('error', {
       message: err.message,
@@ -114,7 +119,7 @@ if (app.get('env') === 'development') {
 /**
  * 错误处理路由-生产状态-no error stacktrace
  */
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render('error', {
     message: err.message,

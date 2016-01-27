@@ -1,0 +1,51 @@
+extends ../layout
+
+block content
+	link(href="/stylesheets/ui-tree.css", rel="stylesheet")
+	div(ng-app="treeapp")
+		section.content-header
+			h1=title
+				small welcome to #{title}
+			ol.breadcrumb
+				li
+					a(href="/")
+						i.fa.fa-dashboard
+						|首页&nbsp;
+				li.active 树图
+		section.content(ng-controller="treectrl",
+			ng-init="pagedata=#{pagedata};pageoption=#{pageoption};")
+			.row
+				.col-md-6
+					div(ui-tree)
+						ol(ui-tree-nodes ng-model="area")
+							li(ng-repeat="province in area" ui-tree-node data-nodrag data-collapsed="true")
+								div.tree-node.tree-node-content(ui-tree-handle)
+									a.btn.btn-success.btn-xs(ng-if="province.city && province.city.length>0",
+									ng-click="toggle()")
+										span.glyphicon(ng-class="{'glyphicon-chevron-right': collapsed,'glyphicon-chevron-down': !collapsed}")
+									| {{province.name}}
+									a.btn.btn-danger.btn-xs.pull-right(ng-click="remove()")
+										span.glyphicon.glyphicon-remove
+										| 
+									a.btn.btn-primary.btn-xs.pull-right(ng-click="add($modelValue)")
+										span.glyphicon.glyphicon-plus
+										| 										
+								ol(ui-tree-nodes ng-model="province.city" ng-class="{hidden:collapsed}")
+									li(ng-repeat="city in province.city" ui-tree-node data-nodrag data-collapsed="true")
+										div.tree-node.tree-node-content(ui-tree-handle)
+											a.btn.btn-success.btn-xs(ng-if="city.area && city.area.length>0",
+											ng-click="toggle()")
+												span.glyphicon(ng-class="{'glyphicon-chevron-right': collapsed,'glyphicon-chevron-down': !collapsed}")											
+											| {{city.name}}
+											a.btn.btn-danger.btn-xs.pull-right(ng-click="remove()")
+												span.glyphicon.glyphicon-remove
+												| 
+											a.btn.btn-primary.btn-xs.pull-right(ng-click="add($modelValue)")
+												span.glyphicon.glyphicon-plus
+												| 														
+										ol(ui-tree-nodes ng-model="city.area" ng-class="{hidden:collapsed}")
+											li(ng-repeat="downtown in city.area" ui-tree-node)
+												div.tree-node.tree-node-content(ui-tree-handle) {{downtown}}
+block pagesrc
+	script(src="/js/china.area.js")
+	script(src="/js/ui-tree-fix.js")

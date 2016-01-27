@@ -6,6 +6,7 @@ var indexController = require('../controllers/index');
 var angularController = require('../controllers/angular');
 
 var angularControllerhyf = require('../controllers/angular_hyf');
+var uitreeController = require('../controllers/ui-tree');
 
 /* GET home page. */
 router.get('/', indexController.index);
@@ -35,5 +36,10 @@ router.post('/angular/basicform', angularController.postbasicform);
 
 router.get('/angular/basicformhyf', angularControllerhyf.basicform);
 router.post('/angular/basicformhyf', angularControllerhyf.postbasicform);
+
+router.get('/angular/basicformsubmit', angularController.basicformsubmit);
+router.post('/angular/basicformsubmit', angularController.postbasicformsubmit);
+
+router.get('/angular/ui-tree-fix', uitreeController.showtreefix);
 
 module.exports = router;
