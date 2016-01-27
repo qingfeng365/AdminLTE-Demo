@@ -43,7 +43,7 @@ block content
 											label.label(ng-message="bignum") 只允许输入大于5000的数字
 									.col-md-4
 										p.help-block 普通文本说明文字普通文本说明文字.....
-								.form-group(ng-class="{'has-success':form['input[date]'].$valid && form['input[date]'].$dirty,'has-error':form['input[date]'].$invalid && form['input[date]'].$dirty}")
+								.form-group.has-feedback(ng-class="{'has-success':form['input[date]'].$valid && form['input[date]'].$dirty,'has-error':form['input[date]'].$invalid && form['input[date]'].$dirty}")
 									label.col-md-3.control-label
 										strong.text-danger *
 										| 单据日期

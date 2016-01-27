@@ -1,0 +1,138 @@
+extends ../layout
+
+block content
+	div(ng-app="pageapp")
+		section.content-header
+			h1=title
+				small welcome to #{title}
+			ol.breadcrumb
+				li
+					a(href="/")
+						i.fa.fa-dashboard
+						|首页&nbsp;
+				li.active 简单表单
+		sesction.content(ng-controller="pagectrl",ng-init="pagedata=#{pagedata};pageoption=#{pageoption};")
+			.row
+				.col-md-10.col-md-offset-1
+					.box.box-danger
+						.box-header.with-border
+							h3.box-title 表单标题
+						form.form-horizontal(name="form" action="/angular/basicformhby",method="post",autocomplete="off")
+							.box-body
+								.form-group.has-feedback(ng-class="{'has-success':form['input[name]'].$valid && form['input[name]'].$dirty,'has-error':form['input[name]'].$invalid && form['input[name]'].$dirty}")
+									label.col-md-3.control-label 
+										strong.text-danger *
+										| 文本标题
+									.col-md-5
+										input.form-control(type="text",name="input[name]",ng-model="input.name",
+											required,
+											ng-minlength="2",ng-maxlength="8",ng-pattern="patternNum",
+											ui-validate="{bigvalue:'checkName($value)'}")
+										span.glyphicon.glyphicon-ok.form-control-feedback(ng-show="form['input[name]'].$valid && form['input[name]'].$dirty")
+										span.glyphicon.glyphicon-exclamation-sign.form-control-feedback(ng-show="form['input[name]'].$invalid && form['input[name]'].$dirty")
+										div(ng-messages="form['input[name].$error']",ng-show="form['input[name]'].$dirty")
+											label.label(ng-message="required") 请输入名称
+											label.label(ng-message="minlength,maxlength") 请输入2-8位的数字
+											label.label(ng-message="pattern") 请输入0-9的数字
+											label.label(ng-message="bigvalue") 必须大于5000
+									.col-md-4
+										p.help_block 普通文本说明文字普通文本说明文字.....
+								.form-group.has-feedback(ng-class="{'has-success':form['input[date]'].$valid && form['input[date]'].$dirty,'has-error':form['input[date]'].$invalid && form['input[date]'].$dirty}")
+									label.col-md-3.control-label
+										strong.text-danger *
+										| 登记日期
+									.col-md-5
+										.input-group
+											input.form-control(type="text",name="input[date]",uib-datepicker-popup="yyyy-MM-dd",
+												ng-model="input.date",is-open="pagestatus.dataopen",
+												current-text="今天",clear-text="清除",close-text="关闭",
+												ui-validate="'checkDate($value)'"
+												)
+											span.input-group-btn
+												button.btn.btn-info(type="button",ng-click="pagestatus.dataopen=true")
+													i.glyphicon.glyphicon-calendar
+											div(ng-messages="form['input[date]'].$error",ng-show="form['input[name]'].$dirty")
+												label.label(ng-message="validator") 日期必须大于今天
+
+									.col-md-4
+										p.help-block
+								.form-group.has-feedback
+									label.col-md-3.control-label 
+										.text-danger *
+										| 客户
+									.col-md-5
+										//- 不是input框 提交不到angular的后端 name 不用遵循input[...]写法
+										ui-select(ng-model="input.person",theme="bootstrap",required,name="selectperson")
+											ui-select-match(placeholder="请选择客户",allow-clear="true") {{$select.selected.name}} :{{$select.selected.email}}
+											ui-select-choices(repeat="item in pagedata.people")
+												div(ng-bind-html="item.name | highlight: $select.search")
+										input(type="type",name="input[person][name]",ng-model="input.person.name",ng-show="false")
+									.col-md-4
+										p.help-block
+								.form-group(ng-class="{'has-success':(form['input[datebegin]'].$valid && form['input[datebegin]'].$dirty) || (form['input[dateend]'].$valid && form['input[dateend]'].$dirty),'has-error':(form['input[datebegin]'].$invalid && form['input[datebegin]'].$dirty) || (form['input[dateend]'].$invalid && form['input[dateend]'].$dirty)}")
+									label.col-md-3.control-label 日期
+									.col-md-5
+										.input-group.with100p.text-center
+											| _
+											.pull-left(style="width:47%")
+												.input-group
+													.input.form-control(type="text",name="input[datebegin]",
+														uib-datepicker-popup="yyyy-MM-dd",
+														ng-model="input.datebegin",is-open="pagestatus.databeginopen",
+															current-text="今天",
+															clear-text="清除",
+															close-text="关闭",
+														ui-validate="'checkDateBegin($value)'",
+														ui-validate-watch="'input.dateend'"
+														)
+													span.input-group-btn
+														button.btn.btn-info(type="button",ng-click="pagestatus.databeginopen=true")
+															i.glyphicon.glyphicon-calendar
+											.pull-right(style="width:47%")
+												.input-group
+													.input.form-control(type="text",name="input[dateend]",
+														uib-datepicker-popup="yyyy-MM-dd",
+														ng-model="input.dateend",is-open="pagestatus.dataopenend",
+															current-text="今天",
+															clear-text="清除",
+															close-text="关闭",
+														ui-validate="'checkDateEnd($value)'",
+														ui-validate-watch="'input.datebegin'"
+														)
+													span.input-group-btn
+														button.btn.btn-info(type="button",ng-click="pagestatus.dataendopen=true")
+															i.glyphicon.glyphicon-calendar
+										div(ng-messages="form['input[datebegin]'].$error",ng-show="form['input[datebegin]'].$dirty")
+											label.label(ng-message="validator") 起始日期不能大于结束日期		
+										div(ng-messages="form['input[dateend]'].$error",ng-show="form['input[dateend]'].$dirty")
+											label.label(ng-message="validator") 结束日期不能小于起始日期							
+									.col-md-4
+										p.help-block
+								.form-group.has-feedback
+									labe.col-md-3.control-label 验证码
+									.col-md-5
+										.input-group
+											input.form-control(type="text",ng-model="validcode",
+												required,name="validcode")
+												img.form-control-feedback(ng-src="/validimgcode?id={{validcodeid}}",style="width:80px;right:54px;",)
+											span.input-group-btn
+												button.btn.btn-info(type="button",ng-click="changevalidimg()") 刷新
+									.col-md-4
+										p.help-block
+							.box-footer
+								input.btn(type="submit",value="提交",ng-disabled="!form.$valid",ng-class="{'btn-primary':form.$valid}")
+			.row
+				.col-md-12
+					.box.box-success
+						ul.nav.nav-stacked
+							li
+								p input
+								//- {{}}由angular 解释
+								//- input|json  json 格式
+								pre {{input|json}}
+							li
+								p formcontroller
+								pre {{form|json}}
+block pagesrc
+	script(src="/js/angular_form_basic_hby.js")
+	script(src="/js/Math.uuid.js")	
