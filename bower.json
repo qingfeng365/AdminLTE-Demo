@@ -1,0 +1,40 @@
+{
+  "name": "Admin-demo",
+  "description": "",
+  "main": "",
+  "authors": [
+    "qingfengwuyou <h3658686@126.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/qingfeng365/AdminLTE-Demo",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "AdminLTE": "admin-lte#~2.3.2",
+    "Ionicons": "ionicons#~2.0.1",
+    "angular": "~1.4.8",
+    "jquery": "~2.1.4",
+    "angular-sanitize": "~1.4.8",
+    "angular-ui-router": "ui-route#~0.2.15",
+    "angular-animate": "~1.4.8",
+    "angular-ui-utils": "~3.0.0",
+    "bootstrap": "~3.3.6",
+    "angular-bootstrap": "~0.14.3",
+    "angular-messages": "~1.4.8",
+    "angular-message-format": "~1.4.8",
+    "angular-touch": "~1.4.8",
+    "selectize": "~0.12.1",
+    "ui-select": "angular-ui-select#~0.13.2",
+    "angular-locale_zh-cn": "*",
+    "validator-js": "~4.5.0",
+    "angular-ui-tree": "~2.13.0",
+    "angular-file-upload": "~2.2.0"
+  }
+}
